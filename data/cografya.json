@@ -1,0 +1,397 @@
+{
+ "id": "cografya",
+ "ad": "Coğrafya",
+ "renk": "#3BB273",
+ "sorular": [
+  {
+   "test": 1,
+   "konu": "Dünya'nın Şekli ve Hareketleri",
+   "soru": "Dünya'nın kendi ekseni etrafında dönmesinin sonucu aşağıdakilerden hangisidir?",
+   "secenekler": [
+    "Mevsimlerin oluşması",
+    "Gece ve gündüzün oluşması",
+    "Güneş ışınlarının yıl içinde farklı açılarla düşmesi",
+    "Yıllık sıcaklık farkları"
+   ],
+   "dogru": 1,
+   "aciklama": "Günlük hareket (eksen hareketi) gece ile gündüzün birbirini izlemesini sağlar."
+  },
+  {
+   "test": 1,
+   "konu": "Dünya'nın Şekli ve Hareketleri",
+   "soru": "Mevsimlerin oluşmasının temel nedeni nedir?",
+   "secenekler": [
+    "Dünya'nın ekseninin eğik olması ve Güneş etrafında dönmesi",
+    "Ay'ın Dünya etrafında dönmesi",
+    "Dünya'nın Güneş'e çok yakın olması",
+    "Okyanus akıntıları"
+   ],
+   "dogru": 0,
+   "aciklama": "Eksen eğikliği ve yıllık hareket, ışınların düşme açısını yıl içinde değiştirerek mevsimleri oluşturur."
+  },
+  {
+   "test": 1,
+   "konu": "Koordinat Sistemi",
+   "soru": "Ekvator'un enlem değeri kaç derecedir?",
+   "secenekler": [
+    "0°",
+    "23°27'",
+    "66°33'",
+    "90°"
+   ],
+   "dogru": 0,
+   "aciklama": "Ekvator 0° enlemidir ve Dünya'yı iki yarım küreye ayırır."
+  },
+  {
+   "test": 1,
+   "konu": "Koordinat Sistemi",
+   "soru": "Ardışık iki boylam arasında kaç dakikalık zaman farkı vardır?",
+   "secenekler": [
+    "1 dakika",
+    "4 dakika",
+    "15 dakika",
+    "60 dakika"
+   ],
+   "dogru": 1,
+   "aciklama": "Dünya 360°'yi 24 saatte döner; 1° için 4 dakika zaman farkı oluşur."
+  },
+  {
+   "test": 1,
+   "konu": "Harita Bilgisi",
+   "soru": "1/100.000 ölçekli bir haritada 2 cm olan uzaklık gerçekte kaç km'dir?",
+   "secenekler": [
+    "0,2 km",
+    "2 km",
+    "20 km",
+    "200 km"
+   ],
+   "dogru": 1,
+   "aciklama": "2 cm × 100.000 = 200.000 cm = 2 km."
+  },
+  {
+   "test": 1,
+   "konu": "Harita Bilgisi",
+   "soru": "Haritalarda aynı yükseltideki noktaları birleştiren eğrilere ne ad verilir?",
+   "secenekler": [
+    "İzoterm",
+    "İzobar",
+    "İzohips",
+    "İzohiyet"
+   ],
+   "dogru": 2,
+   "aciklama": "Eş yükselti eğrilerine izohips denir."
+  },
+  {
+   "test": 1,
+   "konu": "İklim Bilgisi",
+   "soru": "Aşağıdakilerden hangisi iklim elemanlarından biri değildir?",
+   "secenekler": [
+    "Sıcaklık",
+    "Nem",
+    "Basınç",
+    "Bitki örtüsü"
+   ],
+   "dogru": 3,
+   "aciklama": "Sıcaklık, basınç, rüzgâr, nem ve yağış iklim elemanlarıdır; bitki örtüsü iklimin bir sonucudur."
+  },
+  {
+   "konu": "İklim Bilgisi",
+   "soru": "Antalya ile Konya hemen hemen aynı enlemde bulunmasına rağmen kış aylarında Konya'nın sıcaklığı Antalya'dan oldukça düşüktür. Konya'nın deniz seviyesinden yüksekte olması ve denizin ılıman etkisinden uzak kalması bu farka yol açar.\n\nBu metne göre iki şehir arasındaki sıcaklık farkının nedenleri aşağıdakilerden hangisinde birlikte verilmiştir?",
+   "secenekler": [
+    "Yükselti ve denize uzaklık",
+    "Enlem ve boylam",
+    "Nüfus ve sanayi",
+    "Bitki örtüsü ve toprak"
+   ],
+   "dogru": 0,
+   "aciklama": "Metinde Konya'nın yüksekte olması ve denizden uzak olması sıcaklık farkının nedeni olarak gösterilir.",
+   "test": 1
+  },
+  {
+   "test": 1,
+   "konu": "İklim Tipleri",
+   "soru": "\"Yazları sıcak ve kurak, kışları ılık ve yağışlı\" olan iklim tipi hangisidir?",
+   "secenekler": [
+    "Karadeniz iklimi",
+    "Akdeniz iklimi",
+    "Karasal iklim",
+    "Tundra iklimi"
+   ],
+   "dogru": 1,
+   "aciklama": "Bu özellikler Akdeniz ikliminin belirgin özellikleridir."
+  },
+  {
+   "test": 1,
+   "konu": "İklim Tipleri",
+   "soru": "Her mevsim yağışlı olan iklim tipi Türkiye'de nerede görülür?",
+   "secenekler": [
+    "İç Anadolu",
+    "Karadeniz kıyıları",
+    "Güneydoğu Anadolu",
+    "Akdeniz kıyıları"
+   ],
+   "dogru": 1,
+   "aciklama": "Karadeniz iklimi her mevsim yağışlıdır; bu iklim Karadeniz kıyılarında görülür."
+  },
+  {
+   "test": 2,
+   "konu": "İç Kuvvetler",
+   "soru": "Aşağıdakilerden hangisi iç kuvvetlerin sonucu oluşan bir olaydır?",
+   "secenekler": [
+    "Deprem",
+    "Erozyon",
+    "Rüzgâr aşındırması",
+    "Dalga aşındırması"
+   ],
+   "dogru": 0,
+   "aciklama": "Depremler yer kabuğunun hareketleri sonucu oluşur; diğerleri dış kuvvetlerdir."
+  },
+  {
+   "test": 2,
+   "konu": "İç Kuvvetler",
+   "soru": "Türkiye'nin depremler açısından riskli bir ülke olmasının temel nedeni nedir?",
+   "secenekler": [
+    "Fay hatları üzerinde bulunması",
+    "Denizlerle çevrili olması",
+    "Akarsuların çok olması",
+    "Ormanlarının az olması"
+   ],
+   "dogru": 0,
+   "aciklama": "Türkiye Alp-Himalaya kuşağında, aktif fay hatları üzerinde yer alır."
+  },
+  {
+   "konu": "Dış Kuvvetler",
+   "soru": "Pamukkale'de yer altından çıkan kireçli sular yüzeye çıktıktan sonra içindeki kireci bırakır. Bu kireç zamanla birikerek beyaz basamaklar (traverten) oluşturur.\n\nBuna göre travertenlerin oluşumunda aşağıdakilerden hangisi etkili olmuştur?",
+   "secenekler": [
+    "Kireçli suların biriktirmesi",
+    "Rüzgâr aşındırması",
+    "Buzul hareketleri",
+    "Dalga aşındırması"
+   ],
+   "dogru": 0,
+   "aciklama": "Travertenler, kireçli suların yüzeyde kireci çökeltmesiyle oluşan karstik birikim şekilleridir.",
+   "test": 2
+  },
+  {
+   "test": 2,
+   "konu": "Dış Kuvvetler",
+   "soru": "Akarsuların denize döküldüğü yerde taşıdığı malzemeyi biriktirerek oluşturduğu üçgen şeklindeki düzlüklere ne denir?",
+   "secenekler": [
+    "Delta",
+    "Kanyon",
+    "Menderes",
+    "Haliç"
+   ],
+   "dogru": 0,
+   "aciklama": "Delta ovaları; Çukurova, Bafra ve Çarşamba ovaları buna örnektir."
+  },
+  {
+   "test": 2,
+   "konu": "Türkiye'nin Konumu",
+   "soru": "Türkiye hangi yarım kürelerde yer alır?",
+   "secenekler": [
+    "Kuzey ve Doğu",
+    "Güney ve Doğu",
+    "Kuzey ve Batı",
+    "Güney ve Batı"
+   ],
+   "dogru": 0,
+   "aciklama": "Türkiye 36°-42° kuzey enlemleri ve 26°-45° doğu boylamları arasındadır."
+  },
+  {
+   "test": 2,
+   "konu": "Türkiye'nin Konumu",
+   "soru": "Türkiye'nin en doğusu ile en batısı arasında kaç dakikalık yerel saat farkı vardır?",
+   "secenekler": [
+    "19",
+    "38",
+    "76",
+    "120"
+   ],
+   "dogru": 2,
+   "aciklama": "Türkiye 19 boylam genişliğindedir; 19 × 4 = 76 dakika."
+  },
+  {
+   "test": 2,
+   "konu": "Türkiye'nin Yer Şekilleri",
+   "soru": "Türkiye'nin en yüksek dağı hangisidir?",
+   "secenekler": [
+    "Erciyes",
+    "Ağrı Dağı",
+    "Uludağ",
+    "Süphan"
+   ],
+   "dogru": 1,
+   "aciklama": "Ağrı Dağı (5137 m) Türkiye'nin en yüksek noktasıdır."
+  },
+  {
+   "test": 2,
+   "konu": "Türkiye'nin Yer Şekilleri",
+   "soru": "Türkiye'nin en büyük gölü hangisidir?",
+   "secenekler": [
+    "Tuz Gölü",
+    "Van Gölü",
+    "Beyşehir Gölü",
+    "Eğirdir Gölü"
+   ],
+   "dogru": 1,
+   "aciklama": "Van Gölü, Türkiye'nin yüzölçümü en büyük gölüdür."
+  },
+  {
+   "test": 2,
+   "konu": "Türkiye'nin Akarsuları",
+   "soru": "Tamamen Türkiye topraklarında doğup Türkiye'de denize dökülen en uzun akarsu hangisidir?",
+   "secenekler": [
+    "Fırat",
+    "Dicle",
+    "Kızılırmak",
+    "Aras"
+   ],
+   "dogru": 2,
+   "aciklama": "Kızılırmak 1355 km ile Türkiye sınırları içindeki en uzun akarsudur."
+  },
+  {
+   "test": 2,
+   "konu": "Türkiye'nin Akarsuları",
+   "soru": "Türkiye'de en fazla hidroelektrik enerji potansiyeline sahip akarsu hangisidir?",
+   "secenekler": [
+    "Fırat",
+    "Sakarya",
+    "Gediz",
+    "Seyhan"
+   ],
+   "dogru": 0,
+   "aciklama": "Atatürk ve Keban gibi büyük barajlar Fırat üzerindedir."
+  },
+  {
+   "test": 3,
+   "konu": "Nüfus",
+   "soru": "Türkiye'de nüfusun en yoğun olduğu bölge hangisidir?",
+   "secenekler": [
+    "Doğu Anadolu",
+    "Marmara",
+    "İç Anadolu",
+    "Karadeniz"
+   ],
+   "dogru": 1,
+   "aciklama": "Sanayi, ticaret ve ulaşım olanakları nedeniyle Marmara Bölgesi en kalabalık bölgedir."
+  },
+  {
+   "test": 3,
+   "konu": "Nüfus",
+   "soru": "Bir alanda kilometrekareye düşen kişi sayısına ne ad verilir?",
+   "secenekler": [
+    "Tarımsal nüfus yoğunluğu",
+    "Aritmetik nüfus yoğunluğu",
+    "Nüfus artış hızı",
+    "Fizyolojik yoğunluk"
+   ],
+   "dogru": 1,
+   "aciklama": "Aritmetik nüfus yoğunluğu = toplam nüfus / yüzölçümü."
+  },
+  {
+   "konu": "Göç",
+   "soru": "Son yıllarda büyük şehirlerde yaşayan bazı aileler, gürültü ve trafikten uzaklaşmak, daha sakin bir hayat sürmek için köylere ve küçük kasabalara yerleşmektedir.\n\nBu durum aşağıdakilerden hangisine örnektir?",
+   "secenekler": [
+    "Kentten kırsala göç",
+    "Beyin göçü",
+    "Mevsimlik göç",
+    "Zorunlu göç"
+   ],
+   "dogru": 0,
+   "aciklama": "Şehirden köye yerleşmek kentten kırsala göçtür (tersine göç).",
+   "test": 3
+  },
+  {
+   "test": 3,
+   "konu": "Ekonomik Faaliyetler",
+   "soru": "Aşağıdakilerden hangisi birincil (ilkel) ekonomik faaliyettir?",
+   "secenekler": [
+    "Tarım",
+    "Bankacılık",
+    "Sanayi",
+    "Turizm"
+   ],
+   "dogru": 0,
+   "aciklama": "Tarım, hayvancılık, ormancılık, balıkçılık ve madencilik doğadan doğrudan yararlanılan birincil faaliyetlerdir."
+  },
+  {
+   "test": 3,
+   "konu": "Tarım",
+   "soru": "Türkiye'de çay tarımının yoğun olarak yapıldığı il hangisidir?",
+   "secenekler": [
+    "Rize",
+    "Antalya",
+    "Konya",
+    "Şanlıurfa"
+   ],
+   "dogru": 0,
+   "aciklama": "Çay bol yağış ister; Doğu Karadeniz'de özellikle Rize'de yetişir."
+  },
+  {
+   "test": 3,
+   "konu": "Tarım",
+   "soru": "Türkiye'de pamuk üretiminin en fazla yapıldığı bölge hangisidir?",
+   "secenekler": [
+    "Güneydoğu Anadolu",
+    "Karadeniz",
+    "Doğu Anadolu",
+    "Marmara"
+   ],
+   "dogru": 0,
+   "aciklama": "GAP sulamalarıyla Güneydoğu Anadolu (özellikle Şanlıurfa) pamuk üretiminde öndedir."
+  },
+  {
+   "test": 3,
+   "konu": "Enerji Kaynakları",
+   "soru": "Aşağıdakilerden hangisi yenilenebilir enerji kaynağıdır?",
+   "secenekler": [
+    "Kömür",
+    "Doğal gaz",
+    "Güneş",
+    "Petrol"
+   ],
+   "dogru": 2,
+   "aciklama": "Güneş, rüzgâr, hidroelektrik ve jeotermal yenilenebilir kaynaklardır; fosil yakıtlar tükenebilir."
+  },
+  {
+   "test": 3,
+   "konu": "Doğal Afetler",
+   "soru": "Eğimli arazilerde toprağın aşırı yağış sonucu kayarak yer değiştirmesine ne ad verilir?",
+   "secenekler": [
+    "Heyelan",
+    "Çığ",
+    "Sel",
+    "Erozyon"
+   ],
+   "dogru": 0,
+   "aciklama": "Heyelan (toprak kayması) özellikle Karadeniz Bölgesi'nde sık görülür."
+  },
+  {
+   "konu": "Çevre Sorunları",
+   "soru": "Eğimli arazilerde eğim yönünde sürüm yapılması, ormanların kesilmesi ve aşırı otlatma toprağın su ve rüzgârla taşınmasını hızlandırmaktadır.\n\nBu metinde aşağıdaki çevre sorunlarından hangisinin nedenleri anlatılmaktadır?",
+   "secenekler": [
+    "Erozyon",
+    "Hava kirliliği",
+    "Gürültü kirliliği",
+    "Işık kirliliği"
+   ],
+   "dogru": 0,
+   "aciklama": "Toprağın su ve rüzgârla taşınması erozyondur; metinde nedenleri sayılmıştır.",
+   "test": 3
+  },
+  {
+   "test": 3,
+   "konu": "Bölgeler",
+   "soru": "GAP (Güneydoğu Anadolu Projesi) aşağıdaki akarsulardan hangileri üzerinde yürütülmektedir?",
+   "secenekler": [
+    "Fırat ve Dicle",
+    "Kızılırmak ve Yeşilırmak",
+    "Seyhan ve Ceyhan",
+    "Sakarya ve Gediz"
+   ],
+   "dogru": 0,
+   "aciklama": "GAP, Fırat ve Dicle havzalarında sulama ve enerji amaçlı bir bölgesel kalkınma projesidir."
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "Açık Lise Hazırlık",
+    "slug": "acik-lise",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "backgroundColor": "#F5F3EE",
+    "ios": {
+      "bundleIdentifier": "com.burak.aciklise",
+      "supportsTablet": true,
+      "infoPlist": {
+        "UIFileSharingEnabled": true,
+        "LSSupportsOpeningDocumentsInPlace": true
+      }
+    },
+    "android": {
+      "package": "com.burak.aciklise",
+      "versionCode": 1
+    },
+    "plugins": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "acik-lise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "veri": "node scripts/build-data.js",
+    "kur": "npm install expo@latest && npx expo install react react-native expo-status-bar react-native-safe-area-context @react-native-async-storage/async-storage expo-document-picker expo-file-system expo-sharing expo-intent-launcher"
+  },
+  "dependencies": {
+    "expo": "*",
+    "expo-status-bar": "*",
+    "react": "*",
+    "react-native": "*",
+    "react-native-safe-area-context": "*",
+    "@react-native-async-storage/async-storage": "*",
+    "expo-document-picker": "*",
+    "expo-file-system": "*",
+    "expo-sharing": "*",
+    "expo-intent-launcher": "*"
+  }
+}

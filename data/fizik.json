@@ -1,0 +1,397 @@
+{
+ "id": "fizik",
+ "ad": "Fizik",
+ "renk": "#F18F01",
+ "sorular": [
+  {
+   "test": 1,
+   "konu": "Fizik Bilimine Giriş",
+   "soru": "Aşağıdakilerden hangisi temel büyüklüklerden biridir?",
+   "secenekler": [
+    "Hız",
+    "Kuvvet",
+    "Kütle",
+    "Enerji"
+   ],
+   "dogru": 2,
+   "aciklama": "Temel büyüklükler: uzunluk, kütle, zaman, sıcaklık, elektrik akımı, madde miktarı ve ışık şiddetidir."
+  },
+  {
+   "test": 1,
+   "konu": "Fizik Bilimine Giriş",
+   "soru": "Aşağıdakilerden hangisi vektörel bir büyüklüktür?",
+   "secenekler": [
+    "Kütle",
+    "Sıcaklık",
+    "Kuvvet",
+    "Zaman"
+   ],
+   "dogru": 2,
+   "aciklama": "Kuvvetin büyüklüğünün yanında yönü de vardır; bu nedenle vektörel büyüklüktür."
+  },
+  {
+   "test": 1,
+   "konu": "Madde ve Özellikleri",
+   "soru": "Kütlesi 60 g, hacmi 20 cm³ olan bir cismin özkütlesi kaç g/cm³'tür?",
+   "secenekler": [
+    "2",
+    "3",
+    "40",
+    "1200"
+   ],
+   "dogru": 1,
+   "aciklama": "Özkütle = kütle / hacim = 60 / 20 = 3 g/cm³."
+  },
+  {
+   "test": 1,
+   "konu": "Madde ve Özellikleri",
+   "soru": "Su içine bırakılan bir cismin yüzmesi için cismin özkütlesi nasıl olmalıdır?",
+   "secenekler": [
+    "Suyun özkütlesinden büyük",
+    "Suyun özkütlesinden küçük",
+    "Sıfır",
+    "Suyun özkütlesinin iki katı"
+   ],
+   "dogru": 1,
+   "aciklama": "Özkütlesi sıvınınkinden küçük olan cisimler sıvıda yüzer."
+  },
+  {
+   "test": 1,
+   "konu": "Hareket",
+   "soru": "Sabit 20 m/s hızla giden bir araç 5 saniyede kaç metre yol alır?",
+   "secenekler": [
+    "4",
+    "25",
+    "100",
+    "15"
+   ],
+   "dogru": 2,
+   "aciklama": "Yol = hız × zaman = 20 × 5 = 100 m."
+  },
+  {
+   "test": 1,
+   "konu": "Hareket",
+   "soru": "Hızı düzgün olarak artan bir cismin hareketine ne ad verilir?",
+   "secenekler": [
+    "Düzgün doğrusal hareket",
+    "Düzgün hızlanan hareket",
+    "Düzgün yavaşlayan hareket",
+    "Durgunluk"
+   ],
+   "dogru": 1,
+   "aciklama": "İvmesi sabit ve hızla aynı yönde olan hareket düzgün hızlanan harekettir."
+  },
+  {
+   "test": 1,
+   "konu": "Kuvvet ve Hareket",
+   "soru": "Newton'un ikinci yasasına göre F = m · a'dır. Kütlesi 4 kg olan cisme 2 m/s² ivme kazandıran kuvvet kaç N'dur?",
+   "secenekler": [
+    "2",
+    "6",
+    "8",
+    "0,5"
+   ],
+   "dogru": 2,
+   "aciklama": "F = 4 × 2 = 8 N."
+  },
+  {
+   "test": 1,
+   "konu": "Kuvvet ve Hareket",
+   "soru": "\"Her etkiye karşı eşit büyüklükte ve zıt yönde bir tepki vardır.\" ifadesi hangi yasadır?",
+   "secenekler": [
+    "Newton'un 1. yasası",
+    "Newton'un 2. yasası",
+    "Newton'un 3. yasası",
+    "Ohm yasası"
+   ],
+   "dogru": 2,
+   "aciklama": "Etki-tepki prensibi Newton'un üçüncü hareket yasasıdır."
+  },
+  {
+   "konu": "Kuvvet ve Hareket",
+   "soru": "Ani fren yapan bir otobüste ayakta duran yolcular öne doğru savrulur. Bu nedenle yolculara tutunmaları ve emniyet kemeri takmaları önerilir.\n\nYolcuların öne doğru savrulması aşağıdakilerden hangisiyle açıklanır?",
+   "secenekler": [
+    "Eylemsizlik",
+    "Kaldırma kuvveti",
+    "Manyetizma",
+    "Basınç"
+   ],
+   "dogru": 0,
+   "aciklama": "Cisimler hareket durumlarını korumak ister; otobüs dursa da yolcular hareketine devam etmek ister (eylemsizlik).",
+   "test": 1
+  },
+  {
+   "test": 1,
+   "konu": "Kuvvet ve Hareket",
+   "soru": "Kütlesi 5 kg olan bir cismin ağırlığı kaç N'dur? (g = 10 m/s²)",
+   "secenekler": [
+    "0,5",
+    "5",
+    "50",
+    "15"
+   ],
+   "dogru": 2,
+   "aciklama": "Ağırlık G = m · g = 5 × 10 = 50 N."
+  },
+  {
+   "test": 2,
+   "konu": "İş, Güç ve Enerji",
+   "soru": "Bir cisme 10 N'luk kuvvet uygulanarak kuvvet yönünde 3 m hareket ettiriliyor. Yapılan iş kaç joule'dür?",
+   "secenekler": [
+    "13",
+    "30",
+    "3,3",
+    "7"
+   ],
+   "dogru": 1,
+   "aciklama": "İş = kuvvet × yol = 10 × 3 = 30 J."
+  },
+  {
+   "test": 2,
+   "konu": "İş, Güç ve Enerji",
+   "soru": "Yerden yüksekte duran bir cismin sahip olduğu enerjiye ne ad verilir?",
+   "secenekler": [
+    "Kinetik enerji",
+    "Çekim potansiyel enerjisi",
+    "Isı enerjisi",
+    "Elektrik enerjisi"
+   ],
+   "dogru": 1,
+   "aciklama": "Yüksekliğe bağlı enerji çekim potansiyel enerjisidir: Ep = m·g·h."
+  },
+  {
+   "test": 2,
+   "konu": "İş, Güç ve Enerji",
+   "soru": "Hızı iki katına çıkan bir cismin kinetik enerjisi kaç katına çıkar?",
+   "secenekler": [
+    "2",
+    "4",
+    "8",
+    "Değişmez"
+   ],
+   "dogru": 1,
+   "aciklama": "Ek = ½·m·v²; hız 2 katına çıkınca enerji 2² = 4 katına çıkar."
+  },
+  {
+   "test": 2,
+   "konu": "İş, Güç ve Enerji",
+   "soru": "Gücün birimi aşağıdakilerden hangisidir?",
+   "secenekler": [
+    "Joule",
+    "Newton",
+    "Watt",
+    "Pascal"
+   ],
+   "dogru": 2,
+   "aciklama": "Güç birim zamanda yapılan iştir; birimi watt (J/s)'tır."
+  },
+  {
+   "test": 2,
+   "konu": "Isı ve Sıcaklık",
+   "soru": "Isı ile ilgili aşağıdakilerden hangisi doğrudur?",
+   "secenekler": [
+    "Termometre ile ölçülür",
+    "Bir enerji türüdür",
+    "Birimi °C'dir",
+    "Maddenin miktarına bağlı değildir"
+   ],
+   "dogru": 1,
+   "aciklama": "Isı bir enerji türüdür, kalorimetre ile ölçülür ve birimi joule veya kaloridir."
+  },
+  {
+   "test": 2,
+   "konu": "Isı ve Sıcaklık",
+   "soru": "Isının metal bir çubukta bir uçtan diğer uca iletilmesine ne ad verilir?",
+   "secenekler": [
+    "Işıma",
+    "Konveksiyon",
+    "İletim",
+    "Yoğuşma"
+   ],
+   "dogru": 2,
+   "aciklama": "Katılarda tanecikler arası titreşimle ısının aktarılması iletimdir."
+  },
+  {
+   "test": 2,
+   "konu": "Isı ve Sıcaklık",
+   "soru": "Suyun deniz seviyesinde kaynama sıcaklığı kaç °C'dir?",
+   "secenekler": [
+    "0",
+    "50",
+    "100",
+    "120"
+   ],
+   "dogru": 2,
+   "aciklama": "Saf su deniz seviyesinde (1 atm) 100 °C'de kaynar."
+  },
+  {
+   "konu": "Basınç",
+   "soru": "Kar üzerinde normal ayakkabıyla yürüyen bir kişi kara batarken, kar ayakkabısı (geniş tabanlı) giyen kişi batmamaktadır.\n\nBu durumun nedeni aşağıdakilerden hangisidir?",
+   "secenekler": [
+    "Geniş tabanın basıncı azaltması",
+    "Kişinin ağırlığının azalması",
+    "Karın sıcaklığının artması",
+    "Geniş tabanın basıncı artırması"
+   ],
+   "dogru": 0,
+   "aciklama": "Aynı ağırlık daha geniş yüzeye dağılınca basınç azalır, kişi karaya batmaz.",
+   "test": 2
+  },
+  {
+   "test": 2,
+   "konu": "Basınç",
+   "soru": "Sıvı basıncı aşağıdakilerden hangisine bağlı değildir?",
+   "secenekler": [
+    "Sıvının derinliğine",
+    "Sıvının özkütlesine",
+    "Kabın şekline",
+    "Yer çekimi ivmesine"
+   ],
+   "dogru": 2,
+   "aciklama": "Sıvı basıncı P = h·d·g'dir; kabın şekline bağlı değildir."
+  },
+  {
+   "test": 2,
+   "konu": "Basınç",
+   "soru": "Yükseklere çıkıldıkça açık hava basıncı nasıl değişir?",
+   "secenekler": [
+    "Artar",
+    "Azalır",
+    "Değişmez",
+    "Önce artar sonra azalır"
+   ],
+   "dogru": 1,
+   "aciklama": "Yükseldikçe üstteki hava tabakası incelir, açık hava basıncı azalır."
+  },
+  {
+   "test": 3,
+   "konu": "Elektrik",
+   "soru": "Ohm yasasına göre direnci 10 Ω olan bir iletkenin uçları arasındaki gerilim 20 V ise akım kaç A'dir?",
+   "secenekler": [
+    "200",
+    "2",
+    "0,5",
+    "30"
+   ],
+   "dogru": 1,
+   "aciklama": "I = V / R = 20 / 10 = 2 A."
+  },
+  {
+   "test": 3,
+   "konu": "Elektrik",
+   "soru": "Elektrik akımının birimi aşağıdakilerden hangisidir?",
+   "secenekler": [
+    "Volt",
+    "Ohm",
+    "Amper",
+    "Watt"
+   ],
+   "dogru": 2,
+   "aciklama": "Akım şiddetinin birimi amperdir ve ampermetre ile ölçülür."
+  },
+  {
+   "test": 3,
+   "konu": "Elektrik",
+   "soru": "2 Ω ve 3 Ω'luk iki direnç seri bağlanırsa eşdeğer direnç kaç Ω olur?",
+   "secenekler": [
+    "1,2",
+    "5",
+    "6",
+    "1"
+   ],
+   "dogru": 1,
+   "aciklama": "Seri bağlı dirençlerin eşdeğeri toplamlarıdır: 2 + 3 = 5 Ω."
+  },
+  {
+   "test": 3,
+   "konu": "Elektrik",
+   "soru": "Aynı işaretli iki elektrik yükü birbirine nasıl etki eder?",
+   "secenekler": [
+    "Çeker",
+    "İter",
+    "Etkilemez",
+    "Önce çeker sonra iter"
+   ],
+   "dogru": 1,
+   "aciklama": "Aynı işaretli yükler birbirini iter, zıt işaretli yükler çeker."
+  },
+  {
+   "test": 3,
+   "konu": "Manyetizma",
+   "soru": "Bir mıknatısın aynı adlı kutupları birbirine yaklaştırılırsa ne olur?",
+   "secenekler": [
+    "Birbirini çeker",
+    "Birbirini iter",
+    "Mıknatıslık kaybolur",
+    "Hiçbir şey olmaz"
+   ],
+   "dogru": 1,
+   "aciklama": "Mıknatısların aynı kutupları birbirini iter, zıt kutupları çeker."
+  },
+  {
+   "test": 3,
+   "konu": "Dalgalar",
+   "soru": "Ses dalgaları aşağıdaki ortamlardan hangisinde yayılamaz?",
+   "secenekler": [
+    "Su",
+    "Hava",
+    "Boşluk",
+    "Demir"
+   ],
+   "dogru": 2,
+   "aciklama": "Ses mekanik dalgadır, yayılmak için maddesel ortama ihtiyaç duyar; boşlukta yayılmaz."
+  },
+  {
+   "konu": "Dalgalar",
+   "soru": "Şimşek ve gök gürültüsü aynı anda oluşmasına rağmen önce şimşeğin ışığını görür, birkaç saniye sonra gök gürültüsünü duyarız.\n\nBu durumun nedeni aşağıdakilerden hangisidir?",
+   "secenekler": [
+    "Işığın sesten çok daha hızlı yayılması",
+    "Sesin ışıktan hızlı yayılması",
+    "Gök gürültüsünün sonra oluşması",
+    "Işığın havada yayılmaması"
+   ],
+   "dogru": 0,
+   "aciklama": "Işık havada yaklaşık 300.000 km/s, ses yaklaşık 340 m/s hızla yayılır.",
+   "test": 3
+  },
+  {
+   "test": 3,
+   "konu": "Optik",
+   "soru": "Işığın bir ortamdan başka bir ortama geçerken doğrultu değiştirmesine ne ad verilir?",
+   "secenekler": [
+    "Yansıma",
+    "Kırılma",
+    "Soğurulma",
+    "Gölge"
+   ],
+   "dogru": 1,
+   "aciklama": "Işığın farklı yoğunluktaki ortama geçerken yön değiştirmesi kırılmadır."
+  },
+  {
+   "test": 3,
+   "konu": "Optik",
+   "soru": "Düz aynada oluşan görüntü için hangisi doğrudur?",
+   "secenekler": [
+    "Ters ve gerçektir",
+    "Düz ve sanaldır",
+    "Büyük ve gerçektir",
+    "Küçük ve terstir"
+   ],
+   "dogru": 1,
+   "aciklama": "Düz aynada görüntü düz, sanal ve cisimle aynı boyuttadır."
+  },
+  {
+   "test": 3,
+   "konu": "Optik",
+   "soru": "Beyaz ışığın prizmadan geçerek renklerine ayrılmasına ne denir?",
+   "secenekler": [
+    "Yansıma",
+    "Dispersiyon (renklere ayrılma)",
+    "Girişim",
+    "Polarizasyon"
+   ],
+   "dogru": 1,
+   "aciklama": "Beyaz ışık prizmada farklı oranda kırılan renklerine ayrılır; gökkuşağı da bu şekilde oluşur."
+  }
+ ]
+}
