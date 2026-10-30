@@ -9,6 +9,9 @@ on:
         options: [android, ios, ikisi]
         default: android
 
+permissions:
+  contents: write
+
 jobs:
   android:
     if: inputs.platform != 'ios'
@@ -34,6 +37,12 @@ jobs:
         with:
           name: acik-lise-apk
           path: android/app/build/outputs/apk/release/app-release.apk
+      - name: APK'yı sürüm olarak yayınla
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cp android/app/build/outputs/apk/release/app-release.apk acik-lise.apk
+          gh release create "v1.0.${{ github.run_number }}" acik-lise.apk -R "${{ github.repository }}" --title "Açık Lise Hazırlık v1.0.${{ github.run_number }}" --notes "Android APK"
 
   ios:
     if: inputs.platform != 'android'
