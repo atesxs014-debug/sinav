@@ -25,24 +25,56 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-      - name: Paketleri kur
-        run: npm run kur
-      - name: Soru verisini üret
-        run: node scripts/build-data.js
-      - name: Android projesini oluştur
-        run: npx expo prebuild --platform android --non-interactive
-      - name: APK derle
-        run: cd android && ./gradlew assembleRelease --no-daemon
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+      - name: Soru verisi ve uygulama sayfası
+        run: node scripts/build-data.js && node scripts/build-android-html.js
+      - name: İmza anahtarını hazırla
+        env:
+          KEYSTORE_B64: ${{ secrets.KEYSTORE_B64 }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/imza.jks"
+            echo "KEYSTORE_PATH=$RUNNER_TEMP/imza.jks" >> "$GITHUB_ENV"
+          else
+            echo "::warning::KEYSTORE_B64 yok, geçici anahtarla imzalanıyor (güncellemeler eskinin üstüne kurulmaz)."
+          fi
+      - name: APK derle (Android 4.4+)
+        working-directory: android-app
+        env:
+          KEYSTORE_PASSWORD: ${{ secrets.KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
+        run: |
+          set -o pipefail
+          gradle assembleRelease -PversionCode=${{ github.run_number }} --no-daemon --stacktrace 2>&1 | tee "$RUNNER_TEMP/derleme.log"
+      - name: APK'yı doğrula
+        run: |
+          BT=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -1)
+          APK=android-app/app/build/outputs/apk/release/app-release.apk
+          "$BT/aapt" dump badging "$APK" | grep -E "^(package|sdkVersion|targetSdkVersion|application-label)" | tee bilgi.txt
+          "$BT/apksigner" verify --verbose --min-sdk-version 19 "$APK" | grep -E "Verified|Verifies" | tee -a bilgi.txt
+          echo "::notice title=APK::$(tr '\n' ' ' < bilgi.txt) boyut=$(stat -c %s "$APK")"
+          cp "$APK" acik-lise.apk
       - uses: actions/upload-artifact@v4
         with:
           name: acik-lise-apk
-          path: android/app/build/outputs/apk/release/app-release.apk
+          path: acik-lise.apk
       - name: APK'yı sürüm olarak yayınla
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cp android/app/build/outputs/apk/release/app-release.apk acik-lise.apk
-          gh release create "v1.0.${{ github.run_number }}" acik-lise.apk -R "${{ github.repository }}" --title "Açık Lise Hazırlık v1.0.${{ github.run_number }}" --notes "Android APK"
+          gh release create "v1.1.${{ github.run_number }}" acik-lise.apk -R "${{ github.repository }}" \
+            --title "Açık Lise Hazırlık v1.1.${{ github.run_number }}" --notes "Android 4.4 ve üstü için APK." --latest
+      - name: Hata kaydını yayınla
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          (tail -c 60000 "$RUNNER_TEMP/derleme.log" 2>/dev/null || echo "derleme kaydı yok") > hata.txt
+          gh release create "hata-${{ github.run_number }}" -R "${{ github.repository }}" --prerelease \
+            --title "Derleme hatası ${{ github.run_number }}" --notes-file hata.txt
 
   ios:
     if: inputs.platform != 'android'

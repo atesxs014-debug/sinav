@@ -1,0 +1,50 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Her derlemede artan sürüm numarası: yeni APK eskisinin üstüne kurulur
+def vc = Integer.parseInt((project.findProperty('versionCode') ?: '1').toString())
+def ks = System.getenv('KEYSTORE_PATH')
+
+android {
+    namespace 'com.burak.aciklise'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId 'com.burak.aciklise'
+        minSdk 19          // Android 4.4 ve üstü
+        targetSdk 34
+        versionCode vc
+        versionName "1.1." + vc
+    }
+
+    signingConfigs {
+        release {
+            if (ks) {
+                storeFile file(ks)
+                storePassword System.getenv('KEYSTORE_PASSWORD')
+                keyAlias System.getenv('KEY_ALIAS')
+                keyPassword System.getenv('KEY_PASSWORD')
+            }
+            enableV1Signing true   // eski Android sürümleri için
+            enableV2Signing true
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig ks ? signingConfigs.release : signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lint {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
