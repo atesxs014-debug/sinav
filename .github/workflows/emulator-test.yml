@@ -1,0 +1,48 @@
+name: Emülatörde Kurulum Testi
+
+on:
+  workflow_dispatch:
+    inputs:
+      etiket:
+        description: Test edilecek sürüm etiketi (ör. v1.1.3)
+        required: true
+      api:
+        description: Android API seviyesi
+        default: '29'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: KVM aç
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules && sudo udevadm trigger --name-match=kvm
+      - name: APK'yı indir
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release download "${{ inputs.etiket }}" -R "${{ github.repository }}" -p acik-lise.apk
+          ls -la acik-lise.apk
+          unzip -l acik-lise.apk | tail -1
+      - name: Emülatörde kur ve aç
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ inputs.api }}
+          arch: x86_64
+          target: default
+          disable-animations: true
+          emulator-options: -no-window -gpu swiftshader_indirect -no-snapshot -noaudio -no-boot-anim
+          script: |
+            adb shell df /data | tail -1 > df.txt || true
+            (adb install -r acik-lise.apk 2>&1 || true) | tee kurulum.txt
+            adb shell pm list packages | grep aciklise > paket.txt || echo "PAKET YOK" > paket.txt
+            adb logcat -c || true
+            adb shell am start -n com.burak.aciklise/.MainActivity 2>&1 | tee acilis.txt || true
+            sleep 25
+            adb shell dumpsys activity activities | grep -E "mResumedActivity|topResumedActivity" | head -2 > ust.txt || true
+            adb logcat -d | grep -E "AndroidRuntime|FATAL|chromium|CONSOLE|aciklise|PackageManager|INSTALL" | tail -60 > log.txt || true
+            echo "::notice title=Kurulum::$(tr '\n' ' ' < kurulum.txt | cut -c1-900)"
+            echo "::notice title=Paket::$(tr '\n' ' ' < paket.txt) | alan: $(cat df.txt)"
+            echo "::notice title=Açılış::$(tr '\n' ' ' < acilis.txt | cut -c1-400) | ön plan: $(tr '\n' ' ' < ust.txt | cut -c1-300)"
+            echo "::notice title=Log::$(tr '\n' ' ' < log.txt | cut -c1-3500)"
