@@ -36,12 +36,12 @@ jobs:
           script: |
             adb shell df /data | tail -1 > df.txt || true
             (adb install -r acik-lise.apk 2>&1 || true) | tee kurulum.txt
-            adb shell pm list packages | grep aciklise > paket.txt || echo "PAKET YOK" > paket.txt
+            adb shell pm list packages | grep aolsorular > paket.txt || echo "PAKET YOK" > paket.txt
             adb logcat -c || true
-            adb shell am start -n com.burak.aciklise/.MainActivity 2>&1 | tee acilis.txt || true
+            adb shell am start -n com.burak.aolsorular/com.burak.aciklise.MainActivity 2>&1 | tee acilis.txt || true
             sleep 25
             adb shell dumpsys activity activities | grep -E "mResumedActivity|topResumedActivity" | head -2 > ust.txt || true
-            adb logcat -d | grep -E "AndroidRuntime|FATAL|chromium|CONSOLE|aciklise|PackageManager|INSTALL" | tail -60 > log.txt || true
+            adb logcat -d | grep -E "APP_HAZIR|FATAL|AndroidRuntime: E|chromium.*CONSOLE|Uncaught" | tail -60 > log.txt || true
             echo "::notice title=Kurulum::$(tr '\n' ' ' < kurulum.txt | cut -c1-900)"
             echo "::notice title=Paket::$(tr '\n' ' ' < paket.txt) | alan: $(cat df.txt)"
             echo "::notice title=Açılış::$(tr '\n' ' ' < acilis.txt | cut -c1-400) | ön plan: $(tr '\n' ' ' < ust.txt | cut -c1-300)"

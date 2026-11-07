@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    android:installLocation="auto">
 
     <application
         android:allowBackup="true"
@@ -22,7 +23,7 @@
 
         <provider
             android:name=".PdfProvider"
-            android:authorities="com.burak.aciklise.pdf"
+            android:authorities="${applicationId}.pdf"
             android:exported="false"
             android:grantUriPermissions="true" />
     </application>

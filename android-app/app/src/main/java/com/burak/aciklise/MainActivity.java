@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
                 return;
             }
             final Intent v = new Intent(Intent.ACTION_VIEW);
-            v.setDataAndType(Uri.parse("content://com.burak.aciklise.pdf/" + id + ".pdf"), "application/pdf");
+            v.setDataAndType(Uri.parse("content://" + getPackageName() + ".pdf/" + id + ".pdf"), "application/pdf");
             v.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
             runOnUiThread(new Runnable() {
                 @Override

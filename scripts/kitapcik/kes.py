@@ -2,7 +2,7 @@
 import json, os, sys, subprocess, io
 from PIL import Image, ImageOps
 
-DPI = int(os.environ.get('DPI', '170'))
+DPI = int(os.environ.get('DPI', '150'))
 OLC = DPI / 72.0
 
 def sayfa_goruntu(pdf, pi, klasor):
