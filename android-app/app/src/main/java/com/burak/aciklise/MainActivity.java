@@ -40,6 +40,9 @@ public class MainActivity extends Activity {
         s.setDomStorageEnabled(true);   // ilerleme kaydı (localStorage)
         s.setDatabaseEnabled(true);
         s.setAllowFileAccess(true);
+        s.setSupportZoom(true);           // soru resimlerini iki parmakla büyütme
+        s.setBuiltInZoomControls(true);
+        s.setDisplayZoomControls(false);
 
         web.setWebChromeClient(new WebChromeClient());
         web.setWebViewClient(new WebViewClient() {

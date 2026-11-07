@@ -1,11 +1,12 @@
-// Android uygulamasının sayfasını üretir: android-app/web/sablon.html + src/veri.json
-// Çalıştırma: node scripts/build-data.js && node scripts/build-android-html.js
+// Android uygulamasının sayfasını assets klasörüne kopyalar.
+// Soru bankası (banka.js) ve soru resimleri (soru/) scripts/banka_olustur.py ve kesim betikleriyle üretilir.
 const fs = require('fs');
 const path = require('path');
 const kok = path.join(__dirname, '..');
-const veri = fs.readFileSync(path.join(kok, 'src', 'veri.json'), 'utf8').replace(/<\//g, '<\\/');
-const sablon = fs.readFileSync(path.join(kok, 'android-app', 'web', 'sablon.html'), 'utf8');
-const cikti = path.join(kok, 'android-app', 'app', 'src', 'main', 'assets', 'index.html');
-fs.mkdirSync(path.dirname(cikti), { recursive: true });
-fs.writeFileSync(cikti, sablon.replace('__VERI__', () => veri));
-console.log('Yazıldı:', path.relative(kok, cikti), Math.round(fs.statSync(cikti).size / 1024) + ' KB');
+const assets = path.join(kok, 'android-app', 'app', 'src', 'main', 'assets');
+fs.mkdirSync(assets, { recursive: true });
+fs.copyFileSync(path.join(kok, 'android-app', 'web', 'sablon.html'), path.join(assets, 'index.html'));
+for (const f of ['banka.js']) {
+  if (!fs.existsSync(path.join(assets, f))) { console.error('Eksik: ' + f); process.exit(1); }
+}
+console.log('index.html kopyalandı');

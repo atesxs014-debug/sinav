@@ -1,6 +1,10 @@
-# Açık Lise Hazırlık
+# Açık Lise Çıkmış Sorular
 
-11 ders, 330 soru, 50 test (33 konu testi + 17 karma deneme), yanlış tekrarı, çıkmış soru kitapçıkları (PDF) için optik form.
+24 AÖL kitapçığından (Aralık 2023 – Mart 2026) 11.454 çıkmış soru, 138 ders kodu.
+Girişte her ders için kod seçilir (ör. Coğrafya – 3) ya da "Atla" ile geçilir; uygulama yalnızca seçilen kodların sorularını gösterir.
+
+Soru resimleri `android-app/app/src/main/assets/soru/<kitapçık>/<ders>_<no>.png`, cevaplar `banka.js` içinde.
+Yeniden üretmek için: `scripts/kitapcik/` (kitapçıkları ayırma ve kesme) ve `scripts/banka_olustur.py`.
 
 ## Android (4.4 ve üstü)
 - Kod: `android-app/` (bağımlılıksız Java + WebView, minSdk 19, v1+v2 imza)

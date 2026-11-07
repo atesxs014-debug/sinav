@@ -2,17 +2,17 @@
 <html lang="tr">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Açık Lise Hazırlık</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=4, user-scalable=yes">
+<title>Açık Lise Çıkmış Sorular</title>
 <style>
-/* Eski Android WebView'larla uyumlu olsun diye: CSS değişkeni, grid ve flex-gap yok; renkler sabit. */
+/* Eski Android WebView'larla uyumlu: CSS değişkeni, grid ve flex-gap yok; renkler sabit. */
 * { box-sizing: border-box; -webkit-tap-highlight-color: rgba(0,0,0,0); }
 html, body { margin: 0; padding: 0; }
 body { background: #F4F5F7; color: #18233A; font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-size: 15px; line-height: 1.35; }
-body.testte { padding-bottom: 76px; }
-.kabuk { max-width: 600px; margin: 0 auto; padding: 12px 16px 40px; }
+body.testte { padding-bottom: 132px; }
+body.secimde { padding-bottom: 84px; }
+.kabuk { max-width: 640px; margin: 0 auto; padding: 12px 16px 40px; }
 button { font-family: inherit; font-size: inherit; color: inherit; border: 0; background: none; margin: 0; padding: 0; cursor: pointer; }
-input { font-family: inherit; }
 .tik { cursor: pointer; }
 .ara { margin-bottom: 12px; }
 .ust { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; min-height: 44px; margin-bottom: 12px; }
@@ -21,97 +21,92 @@ input { font-family: inherit; }
 .ust h1 { font-size: 19px; margin: 0; font-weight: 800; }
 .ust small { display: block; color: #5E6778; font-size: 13px; font-weight: 500; margin-top: 2px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
 .etiket { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: #5E6778; font-weight: 700; }
-.dev { font-size: 28px; line-height: 1.15; margin: 4px 0 14px; font-weight: 800; }
+.dev { font-size: 28px; line-height: 1.15; margin: 4px 0 10px; font-weight: 800; }
+.bilgi { color: #5E6778; line-height: 1.5; margin: 0 0 14px; }
 .ozet { display: -webkit-box; display: -webkit-flex; display: flex; background: #fff; border: 1px solid #DDE1E8; border-radius: 14px; margin-bottom: 12px; }
 .oz { -webkit-flex: 1; flex: 1; padding: 14px 6px; text-align: center; }
 .oz + .oz { border-left: 1px solid #DDE1E8; }
-.oz b { display: block; font-size: 24px; }
-.oz b small { font-size: 13px; color: #5E6778; }
+.oz b { display: block; font-size: 22px; }
 .oz span { font-size: 12px; color: #5E6778; }
-.ikili { display: -webkit-box; display: -webkit-flex; display: flex; margin-bottom: 12px; }
+.ikili { display: -webkit-box; display: -webkit-flex; display: flex; }
 .ikili > * { -webkit-flex: 1; flex: 1; min-width: 0; }
 .ikili > * + * { margin-left: 10px; }
-.blok { border-radius: 14px; padding: 16px; min-height: 100px; color: #fff; display: -webkit-box; display: -webkit-flex; display: flex; -webkit-box-orient: vertical; -webkit-flex-direction: column; flex-direction: column; -webkit-box-pack: end; -webkit-justify-content: flex-end; justify-content: flex-end; }
-.blok b { display: block; font-size: 17px; line-height: 1.2; }
-.blok span { display: block; font-size: 12px; opacity: .85; margin-top: 4px; }
-.mavi { background: #1F3A6B; } .optik { background: #A3154D; }
 .bant { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; background: #FBE4E4; color: #C93535; border-radius: 12px; padding: 14px; font-weight: 700; margin-bottom: 12px; }
 .bant .ic { -webkit-flex: 1; flex: 1; }
 h2 { font-size: 15px; margin: 18px 0 8px; font-weight: 800; }
 .satir { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; background: #fff; border: 1px solid #DDE1E8; border-radius: 12px; padding: 14px; margin-bottom: 8px; }
 .satir:active { border-color: #1F3A6B; background: #F8FAFD; }
-.satir .ic { -webkit-flex: 1; flex: 1; min-width: 0; margin: 0 10px; }
-.satir .ic:first-child { margin-left: 0; }
+.satir .ic { -webkit-flex: 1; flex: 1; min-width: 0; margin-right: 10px; }
 .ad { font-weight: 700; font-size: 15px; }
-.alt { color: #5E6778; font-size: 13px; margin-top: 3px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
-.nokta { width: 12px; height: 12px; border-radius: 6px; -webkit-flex: none; flex: none; }
-.cubuk { height: 6px; border-radius: 3px; background: #DDE1E8; overflow: hidden; margin-top: 7px; }
-.cubuk i { display: block; height: 6px; }
+.alt { color: #5E6778; font-size: 13px; margin-top: 3px; }
+.kod { display: inline-block; font-size: 12px; font-weight: 800; color: #1F3A6B; background: #E6ECF6; border-radius: 6px; padding: 2px 7px; margin-right: 6px; }
+.cubuk { height: 6px; border-radius: 3px; background: #DDE1E8; overflow: hidden; margin-top: 8px; }
+.cubuk i { display: block; height: 6px; background: #1F3A6B; }
 .sayac { color: #5E6778; font-size: 13px; font-weight: 600; white-space: nowrap; }
 .rozet { padding: 4px 10px; border-radius: 20px; font-weight: 800; font-size: 13px; background: #E6ECF6; color: #1F3A6B; white-space: nowrap; }
-.etiketler span { display: inline-block; border: 1px solid #DDE1E8; background: #fff; border-radius: 20px; padding: 4px 10px; font-size: 12px; margin: 0 6px 6px 0; }
-.sure { font-weight: 800; color: #1F3A6B; font-size: 17px; margin-left: 8px; }
-.sure.az { color: #C93535; }
-.konu { font-size: 12px; font-weight: 700; letter-spacing: .5px; text-transform: uppercase; margin: 12px 0 8px; }
-.soru { font-family: "Noto Serif", "Droid Serif", Georgia, serif; font-size: 18px; line-height: 1.55; white-space: pre-line; margin: 0 0 14px; }
-.sik { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: flex-start; align-items: flex-start; background: #fff; border: 2px solid #DDE1E8; border-radius: 12px; padding: 12px 14px; margin-bottom: 10px; }
-.sik .h { -webkit-flex: none; flex: none; width: 30px; height: 30px; line-height: 27px; border-radius: 15px; border: 2px solid #C2185B; color: #C2185B; text-align: center; font-weight: 800; font-size: 14px; margin-right: 12px; }
-.sik .y { -webkit-flex: 1; flex: 1; min-width: 0; font-family: "Noto Serif", "Droid Serif", Georgia, serif; font-size: 16px; line-height: 1.45; padding-top: 3px; }
-.sik.secili { border-color: #1F3A6B; background: #E6ECF6; }
-.sik.secili .h { background: #1F3A6B; border-color: #1F3A6B; color: #fff; }
-.noktalar { margin-top: 14px; }
-.noktalar button { display: inline-block; width: 36px; height: 36px; border-radius: 8px; border: 1px solid #DDE1E8; background: #fff; font-size: 12px; font-weight: 700; color: #5E6778; margin: 0 6px 6px 0; vertical-align: top; }
-.noktalar button.dolu { background: #1F3A6B; color: #fff; border-color: #1F3A6B; }
-.noktalar button.su { border: 2px solid #18233A; }
-.alt-bar { position: fixed; left: 0; right: 0; bottom: 0; background: #F4F5F7; border-top: 1px solid #DDE1E8; padding: 10px 16px; z-index: 5; }
-.alt-bar .ic { max-width: 568px; margin: 0 auto; display: -webkit-box; display: -webkit-flex; display: flex; }
-.alt-bar .btn { -webkit-flex: 1; flex: 1; }
-.alt-bar .btn + .btn { margin-left: 10px; }
+.rozet.iyi { background: #E2F3E9; color: #1E8A50; }
+.rozet.kotu { background: #FBE4E4; color: #C93535; }
 .btn { display: block; width: 100%; border-radius: 12px; padding: 13px; font-weight: 800; background: #1F3A6B; color: #fff; text-align: center; border: 2px solid #1F3A6B; }
 .btn.cizgi { background: transparent; color: #1F3A6B; }
 .btn.yesil { background: #1E8A50; border-color: #1E8A50; }
 .btn.kirmizi { background: #C93535; border-color: #C93535; }
-.btn.kirmizi-cizgi { background: transparent; border-color: #C93535; color: #C93535; }
 .btn.kapali { opacity: .4; }
+.baglanti { display: block; width: 100%; color: #1F3A6B; font-weight: 700; padding: 12px; text-align: center; }
+.baglanti.sil { color: #C93535; }
+/* ders seçimi */
+.adim { font-size: 13px; color: #5E6778; font-weight: 700; margin-bottom: 4px; }
+.secenek { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; background: #fff; border: 2px solid #DDE1E8; border-radius: 12px; padding: 13px 14px; margin-bottom: 8px; }
+.secenek .kutu { -webkit-flex: none; flex: none; width: 24px; height: 24px; border-radius: 6px; border: 2px solid #9AA3B4; margin-right: 12px; color: #fff; font-weight: 900; text-align: center; line-height: 20px; font-size: 15px; }
+.secenek .ic { -webkit-flex: 1; flex: 1; min-width: 0; }
+.secenek.on { border-color: #1F3A6B; background: #E6ECF6; }
+.secenek.on .kutu { background: #1F3A6B; border-color: #1F3A6B; }
+.alt-bar { position: fixed; left: 0; right: 0; bottom: 0; background: #F4F5F7; border-top: 1px solid #DDE1E8; padding: 10px 16px; z-index: 5; }
+.alt-bar .ic { max-width: 608px; margin: 0 auto; }
+.alt-bar .satir2 { display: -webkit-box; display: -webkit-flex; display: flex; }
+.alt-bar .satir2 > * { -webkit-flex: 1; flex: 1; min-width: 0; }
+.alt-bar .satir2 > * + * { margin-left: 10px; }
+/* test */
+.soru-kart { background: #fff; border: 1px solid #DDE1E8; border-radius: 12px; padding: 10px; }
+.soru-img { display: block; width: 100%; max-width: 560px; height: auto; margin: 0 auto; }
+.iptal { background: #FFF4D6; color: #7A5A00; border-radius: 10px; padding: 10px 12px; font-weight: 700; margin-top: 10px; }
+.siklar { display: -webkit-box; display: -webkit-flex; display: flex; margin-bottom: 10px; }
+.siklar button { -webkit-flex: 1; flex: 1; height: 52px; border-radius: 12px; border: 2px solid #C2185B; color: #C2185B; font-size: 20px; font-weight: 900; background: #fff; }
+.siklar button + button { margin-left: 8px; }
+.siklar button.on { background: #1F3A6B; border-color: #1F3A6B; color: #fff; }
+.siklar button.dogru { background: #1E8A50; border-color: #1E8A50; color: #fff; }
+.siklar button.yanlis { background: #C93535; border-color: #C93535; color: #fff; }
+.siklar.pasif button { opacity: .35; }
+.noktalar { margin-top: 12px; }
+.noktalar button { display: inline-block; width: 36px; height: 36px; border-radius: 8px; border: 1px solid #DDE1E8; background: #fff; font-size: 12px; font-weight: 700; color: #5E6778; margin: 0 6px 6px 0; vertical-align: top; }
+.noktalar button.dolu { background: #1F3A6B; color: #fff; border-color: #1F3A6B; }
+.noktalar button.d { background: #1E8A50; color: #fff; border-color: #1E8A50; }
+.noktalar button.y { background: #C93535; color: #fff; border-color: #C93535; }
+.noktalar button.su { border: 2px solid #18233A; }
+.anlik { font-weight: 800; margin: 10px 2px 0; }
+.anlik.d { color: #1E8A50; } .anlik.y { color: #C93535; }
+/* sonuç */
 .sonuc { background: #fff; border: 1px solid #DDE1E8; border-radius: 14px; padding: 22px; text-align: center; margin-bottom: 12px; }
 .puan { font-size: 60px; font-weight: 800; color: #1F3A6B; line-height: 1; }
 .dyb { text-align: center; font-weight: 800; margin-top: 12px; }
 .dyb span { display: inline-block; margin: 0 8px; }
-.d { color: #1E8A50; } .yl { color: #C93535; } .b { color: #5E6778; } .p { color: #1F3A6B; }
+.d { color: #1E8A50; } .yl { color: #C93535; } .b { color: #5E6778; }
 .filtre { margin: 12px 0; }
 .filtre button { display: inline-block; padding: 7px 14px; border-radius: 20px; border: 1px solid #DDE1E8; background: #fff; font-weight: 700; font-size: 13px; margin: 0 6px 6px 0; }
 .filtre button.on { background: #1F3A6B; color: #fff; border-color: #1F3A6B; }
-.filtre button.on2 { background: #A3154D; color: #fff; border-color: #A3154D; }
-.yarim { width: 48%; }
-.cozum { background: #fff; border: 1px solid #DDE1E8; border-radius: 12px; padding: 14px; margin-bottom: 10px; }
-.cozum .konu { margin-top: 0; }
-.cozum .soru { font-size: 16px; margin-bottom: 8px; }
-.cs { display: -webkit-box; display: -webkit-flex; display: flex; padding: 6px 8px; border-radius: 8px; font-family: "Noto Serif", "Droid Serif", Georgia, serif; }
-.cs b { margin-right: 8px; }
-.cs span { -webkit-flex: 1; flex: 1; min-width: 0; }
-.cs.ok { background: #E2F3E9; } .cs.no { background: #FBE4E4; }
-.acik { font-family: "Noto Serif", "Droid Serif", Georgia, serif; font-size: 14px; line-height: 1.5; color: #4A5263; background: #F4F5F7; border-radius: 8px; padding: 10px; margin-top: 8px; }
-.bilgi { color: #5E6778; line-height: 1.5; margin: 0 0 14px; }
+.cozum { background: #fff; border: 1px solid #DDE1E8; border-radius: 12px; padding: 10px; margin-bottom: 12px; }
+.cozum-ust { font-weight: 800; margin: 2px 2px 8px; }
+.cozum-alt { margin: 8px 2px 2px; font-weight: 700; }
 .bos { color: #5E6778; text-align: center; margin: 24px 0; }
-.kart { background: #fff; border: 1px solid #DDE1E8; border-radius: 12px; padding: 14px; margin-top: 12px; }
-.kart .baslik { font-weight: 800; font-size: 16px; margin-bottom: 10px; }
-.kart .rozet-k { display: inline-block; font-size: 11px; font-weight: 700; color: #A3154D; background: #FBE7EF; border-radius: 10px; padding: 2px 8px; margin-left: 6px; vertical-align: middle; }
-.form-satir { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding: 11px 0; border-top: 1px solid #DDE1E8; }
-.form-satir .ic { -webkit-flex: 1; flex: 1; min-width: 0; font-weight: 700; }
-.sil { display: block; width: 100%; color: #C93535; font-size: 13px; font-weight: 700; padding: 10px; margin-top: 6px; text-align: center; }
-.optik-satir { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; padding: 4px 0; }
-.optik-satir .no { width: 34px; font-weight: 800; color: #5E6778; -webkit-flex: none; flex: none; }
-.daire { width: 42px; height: 42px; border-radius: 21px; border: 2px solid #C2185B; color: #C2185B; font-weight: 800; margin-right: 10px; -webkit-flex: none; flex: none; }
-.daire.on { background: #1F3A6B; border-color: #1F3A6B; color: #fff; }
-.anahtar .daire.on { background: #A3154D; border-color: #A3154D; }
-.daire.ipucu { border-color: #1E8A50; border-width: 3px; color: #1E8A50; }
-label { display: block; font-weight: 700; font-size: 13px; margin: 14px 0 6px; }
-.girdi { display: block; width: 100%; background: #fff; border: 1px solid #C9CED8; border-radius: 10px; padding: 12px; font-size: 16px; color: #18233A; -webkit-appearance: none; }
-.onizleme-not { font-size: 12px; color: #5E6778; text-align: center; margin-top: 18px; }
+.anahtar { display: -webkit-box; display: -webkit-flex; display: flex; -webkit-align-items: center; align-items: center; background: #fff; border: 1px solid #DDE1E8; border-radius: 12px; padding: 12px 14px; margin-bottom: 12px; }
+.anahtar .ic { -webkit-flex: 1; flex: 1; font-weight: 700; }
+.anahtar .dugme { width: 50px; height: 28px; border-radius: 14px; background: #C9CED8; position: relative; }
+.anahtar .dugme i { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 11px; background: #fff; }
+.anahtar.on .dugme { background: #1E8A50; }
+.anahtar.on .dugme i { left: 25px; }
 #modal { display: none; position: fixed; left: 0; top: 0; right: 0; bottom: 0; background: rgba(16,20,28,.55); z-index: 20; }
 #modal .kutu { position: absolute; left: 16px; right: 16px; top: 30%; max-width: 420px; margin: 0 auto; background: #fff; border-radius: 16px; padding: 18px; }
 #modal p { margin: 0 0 16px; font-size: 16px; line-height: 1.45; font-weight: 600; }
-#toast { position: fixed; left: 16px; right: 16px; bottom: 90px; text-align: center; z-index: 30; display: none; }
+#toast { position: fixed; left: 16px; right: 16px; bottom: 150px; text-align: center; z-index: 30; display: none; }
 #toast span { display: inline-block; background: #18233A; color: #fff; padding: 10px 16px; border-radius: 20px; font-size: 14px; }
 </style>
 </head>
@@ -119,17 +114,16 @@ label { display: block; font-weight: 700; font-size: 13px; margin: 14px 0 6px; }
 <div class="kabuk" id="uygulama"></div>
 <div id="modal"></div>
 <div id="toast"><span></span></div>
-<script id="veri" type="application/json">__VERI__</script>
+<script src="banka.js"></script>
 <script>
 /* Bilerek ES5 yazıldı: Android 4.4'ün eski WebView'ında da çalışır. */
 (function () {
   'use strict';
-  var V = JSON.parse(document.getElementById('veri').textContent);
+  var B = window.BANKA;
   var HARF = ['A', 'B', 'C', 'D'];
-  var ANAHTAR = 'aciklise:v2';
-  var ANDROID = typeof window.Android !== 'undefined';
+  var ANAHTAR = 'aciklise:v3';
 
-  var D = { sonuclar: {}, yanlislar: [], cikmis: [] };
+  var D = { kurulum: false, secim: [], sonuc: {}, yanlis: [], anlik: false };
   try {
     var kayit = localStorage.getItem(ANAHTAR);
     if (kayit) { var o = JSON.parse(kayit); for (var k in o) { if (o.hasOwnProperty(k)) D[k] = o[k]; } }
@@ -137,23 +131,27 @@ label { display: block; font-weight: 700; font-size: 13px; margin: 14px 0 6px; }
   function kaydet() { try { localStorage.setItem(ANAHTAR, JSON.stringify(D)); } catch (e) {} }
 
   /* ---------- yardımcılar ---------- */
-  function bul(dizi, fn) { for (var i = 0; i < dizi.length; i++) { if (fn(dizi[i], i)) return dizi[i]; } return null; }
-  function benzersiz(dizi) { var r = []; for (var i = 0; i < dizi.length; i++) { if (r.indexOf(dizi[i]) < 0) r.push(dizi[i]); } return r; }
-  function iki(n) { return n < 10 ? '0' + n : String(n); }
-  function dolu(n, v) { var a = []; for (var i = 0; i < n; i++) a.push(v); return a; }
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;'); }
   function anahtarlar(o) { var r = []; for (var k in o) { if (o.hasOwnProperty(k)) r.push(k); } return r; }
-  function ders(id) { return bul(V.dersler, function (d) { return d.id === id; }); }
-  function testBul(id) { return bul(V.testler, function (t) { return t.id === id; }); }
-  function dersTestleri(id) { return V.testler.filter(function (t) { return t.ders === id; }); }
-  function kitapcik(id) { return bul(D.cikmis, function (k) { return k.id === id; }); }
-  function formBul(k, id) { return k ? bul(k.formlar, function (f) { return f.id === id; }) : null; }
+  function iki(n) { return n < 10 ? '0' + n : String(n); }
+  function icinde(dizi, x) { return dizi.indexOf(x) >= 0; }
+  function resim(kid, did, no) { return 'soru/' + kid + '/' + did + '_' + iki(no) + '.png'; }
+  function kitapAdi(kid) { var k = B.kitaplar[kid]; return k.ad + ' · ' + k.oturum + '. oturum'; }
+  function soruSay(did) { var n = 0; B.dersler[did].s.forEach(function (s) { n += s.c.length; }); return n; }
+  function karistir(a) { for (var i = a.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = a[i]; a[i] = a[j]; a[j] = t; } return a; }
+  // Bir soru: { d: ders, k: kitapçık, n: numara, c: doğru şık (-1 iptal) }
+  function soruBul(did, kid, n) {
+    var s = null; B.dersler[did].s.forEach(function (x) { if (x.k === kid) s = x; });
+    return s ? { d: did, k: kid, n: n, c: s.c[n - 1] } : null;
+  }
+  function soruAnahtar(q) { return q.d + '|' + q.k + '|' + q.n; }
+  function anahtardanSoru(a) { var p = a.split('|'); return B.dersler[p[0]] ? soruBul(p[0], p[1], +p[2]) : null; }
 
   var kok = document.getElementById('uygulama');
   var modalEl = document.getElementById('modal');
   var toastEl = document.getElementById('toast');
-  var yigin = [{ e: 'ana' }];
-  var T = null, zaman = null, toastZ = null, modalFn = null;
+  var yigin = [D.kurulum ? { e: 'ana' } : { e: 'giris' }];
+  var T = null, toastZ = null, modalFn = null, secimGecici = null;
 
   function simdiki() { return yigin[yigin.length - 1]; }
   function git(x) { yigin.push(x); ciz(); window.scrollTo(0, 0); }
@@ -164,7 +162,7 @@ label { display: block; font-weight: 700; font-size: 13px; margin: 14px 0 6px; }
     toastEl.firstChild.textContent = m;
     toastEl.style.display = 'block';
     clearTimeout(toastZ);
-    toastZ = setTimeout(function () { toastEl.style.display = 'none'; }, 2600);
+    toastZ = setTimeout(function () { toastEl.style.display = 'none'; }, 2400);
   }
   function onay(metin, evetYazi, fn, tehlike) {
     modalFn = fn;
@@ -181,248 +179,224 @@ label { display: block; font-weight: 700; font-size: 13px; margin: 14px 0 6px; }
   });
 
   function ust(baslik, alt, sag, geriEylem) {
-    return '<div class="ust"><button class="geri" data-a="' + (geriEylem || 'geri') + '" aria-label="Geri">‹</button>' +
+    return '<div class="ust">' + (geriEylem === 'yok' ? '' : '<button class="geri" data-a="' + (geriEylem || 'geri') + '" aria-label="Geri">‹</button>') +
       '<div class="ust-yazi"><h1>' + esc(baslik) + '</h1>' + (alt ? '<small>' + esc(alt) + '</small>' : '') + '</div>' + (sag || '') + '</div>';
   }
-  function testSatiri(t) {
-    var r = D.sonuclar[t.id];
-    return '<div class="satir tik" data-a="testAc" data-id="' + t.id + '"><div class="ic"><div class="ad">' + esc(t.ad) + '</div>' +
-      '<div class="alt">' + esc(t.aciklama) + '</div></div>' +
-      (r ? '<span class="rozet">' + r.dogru + '/' + r.toplam + '</span>' : '<span class="sayac">' + t.sorular.length + ' soru · ' + t.sure + ' dk</span>') + '</div>';
+  function dersIlerleme(did) {
+    var ders = B.dersler[did], biten = 0, dogru = 0, toplam = 0;
+    ders.s.forEach(function (s) { var r = D.sonuc[did + '|' + s.k]; if (r) { biten++; dogru += r.dogru; toplam += r.toplam; } });
+    return { biten: biten, sinav: ders.s.length, basari: toplam ? Math.round(dogru / toplam * 100) : null };
   }
 
   /* ---------- ekranlar ---------- */
   var E = {};
 
-  E.ana = function () {
-    var ks = anahtarlar(D.sonuclar), td = 0, ts = 0;
-    ks.forEach(function (k) { td += D.sonuclar[k].dogru; ts += D.sonuclar[k].toplam; });
-    var h = '<div class="etiket">Açık Lise Hazırlık</div><h1 class="dev">Bugün ne çalışıyoruz?</h1>';
-    h += '<div class="ozet"><div class="oz"><b>' + ks.length + '<small>/' + V.testler.length + '</small></b><span>Test çözüldü</span></div>' +
-      '<div class="oz"><b>%' + (ts ? Math.round(td / ts * 100) : 0) + '</b><span>Başarı</span></div>' +
-      '<div class="oz"><b>' + D.yanlislar.length + '</b><span>Tekrar edilecek</span></div></div>';
-    h += '<div class="ikili"><div class="blok mavi tik" data-a="denemeler"><b>Karma Denemeler</b><span>17 deneme · 20\'şer soru</span></div>' +
-      '<div class="blok optik tik" data-a="cikmis"><b>Çıkmış Sorular</b><span>Kitapçık + optik form</span></div></div>';
-    if (D.yanlislar.length) {
-      h += '<div class="bant tik" data-a="yanlislar"><span class="ic">Yanlış yaptığın ' + D.yanlislar.length + ' soruyu tekrar et</span><span>›</span></div>';
-    }
-    h += '<h2>Dersler</h2>';
-    V.dersler.forEach(function (d) {
-      var tl = dersTestleri(d.id);
-      var biten = tl.filter(function (t) { return D.sonuclar[t.id]; }).length;
-      h += '<div class="satir tik" data-a="ders" data-id="' + d.id + '"><span class="nokta" style="background:' + d.renk + '"></span>' +
-        '<div class="ic"><div class="ad">' + esc(d.ad) + '</div><div class="cubuk"><i style="width:' + Math.round(biten / tl.length * 100) + '%;background:' + d.renk + '"></i></div></div>' +
-        '<span class="sayac">' + biten + '/' + tl.length + '</span></div>';
+  E.giris = function () {
+    return '<div class="etiket" style="margin-top:8px">Açık Lise · Çıkmış Sorular</div><h1 class="dev">Hangi dersleri alıyorsun?</h1>' +
+      '<p class="bilgi">' + B.aileler.length + ' ders grubu tek tek gelecek. Her birinde bu dönem aldığın ders kodunu seç, örneğin Coğrafya – 3. Almadığın dersi "Atla" ile geç. ' +
+      'Uygulama sadece seçtiğin kodların çıkmış sorularını gösterir.</p>' +
+      '<div class="ozet"><div class="oz"><b>' + anahtarlar(B.kitaplar).length + '</b><span>Kitapçık</span></div><div class="oz"><b>' + anahtarlar(B.dersler).length + '</b><span>Ders kodu</span></div>' +
+      '<div class="oz"><b>' + toplamSoru() + '</b><span>Çıkmış soru</span></div></div>' +
+      '<div class="ara"><button class="btn" data-a="secimBasla">Derslerimi Seç</button></div>' +
+      '<button class="baglanti" data-a="girisAtla">Atla, sonra seçerim</button>';
+  };
+  function toplamSoru() { var n = 0; anahtarlar(B.dersler).forEach(function (d) { n += soruSay(d); }); return n; }
+
+  E.sec = function (x) {
+    var aile = B.aileler[x.i], son = x.i === B.aileler.length - 1;
+    var h = ust('Ders seçimi', (x.i + 1) + ' / ' + B.aileler.length, '', 'secGeri');
+    h += '<div class="cubuk" style="margin:0 0 14px"><i style="width:' + Math.round((x.i + 1) / B.aileler.length * 100) + '%"></i></div>';
+    h += '<h1 class="dev" style="font-size:24px">' + esc(aile.ad) + '</h1><p class="bilgi">Bu dönem aldığın kodu işaretle. Birden fazla seçebilirsin. Almıyorsan "Atla"ya bas.</p>';
+    aile.d.forEach(function (did) {
+      var ders = B.dersler[did], on = icinde(secimGecici, did);
+      h += '<div class="secenek tik' + (on ? ' on' : '') + '" data-a="secToggle" data-d="' + did + '"><span class="kutu">' + (on ? '✓' : '') + '</span>' +
+        '<div class="ic"><div class="ad">' + esc(ders.ad) + '</div><div class="alt"><span class="kod">' + ders.kod + '</span>' + ders.s.length + ' sınav · ' + soruSay(did) + ' soru</div></div></div>';
     });
-    if (!ANDROID) h += '<p class="onizleme-not">Tarayıcı önizlemesi: ilerlemen yalnızca bu tarayıcıda saklanır.</p>';
+    var secili = aile.d.some(function (d) { return icinde(secimGecici, d); });
+    h += '<button class="baglanti" data-a="secBitir">Seçimi bitir (' + secimGecici.length + ' ders)</button>';
+    h += '<div class="alt-bar"><div class="ic satir2"><button class="btn cizgi" data-a="secAtla">Atla</button>' +
+      '<button class="btn' + (secili ? '' : ' kapali') + '" data-a="secIleri">' + (son ? 'Bitir' : 'İleri ›') + '</button></div></div>';
+    return h;
+  };
+
+  E.ana = function () {
+    var h = '<div class="etiket" style="margin-top:8px">Açık Lise · Çıkmış Sorular</div><h1 class="dev">Derslerim</h1>';
+    if (!D.secim.length) {
+      return h + '<p class="bilgi">Henüz ders seçmedin. Ders kodlarını seçince o derslerin çıkmış soruları burada görünür.</p>' +
+        '<button class="btn" data-a="secimBasla">Derslerimi Seç</button>';
+    }
+    var biten = 0, dogru = 0, toplam = 0;
+    D.secim.forEach(function (did) { if (!B.dersler[did]) return; B.dersler[did].s.forEach(function (s) { var r = D.sonuc[did + '|' + s.k]; if (r) { biten++; dogru += r.dogru; toplam += r.toplam; } }); });
+    h += '<div class="ozet"><div class="oz"><b>' + D.secim.length + '</b><span>Ders</span></div><div class="oz"><b>' + biten + '</b><span>Sınav çözüldü</span></div>' +
+      '<div class="oz"><b>%' + (toplam ? Math.round(dogru / toplam * 100) : 0) + '</b><span>Başarı</span></div></div>';
+    var yl = D.yanlis.filter(function (a) { var p = a.split('|'); return icinde(D.secim, p[0]); });
+    if (yl.length) h += '<div class="bant tik" data-a="yanlislar"><span class="ic">Yanlış yaptığın ' + yl.length + ' soruyu tekrar et</span><span>›</span></div>';
+    D.secim.forEach(function (did) {
+      var ders = B.dersler[did]; if (!ders) return;
+      var il = dersIlerleme(did);
+      h += '<div class="satir tik" data-a="ders" data-d="' + did + '"><div class="ic"><div class="ad">' + esc(ders.ad) + '</div>' +
+        '<div class="alt"><span class="kod">' + ders.kod + '</span>' + il.biten + '/' + il.sinav + ' sınav' + (il.basari !== null ? ' · %' + il.basari + ' başarı' : '') + '</div>' +
+        '<div class="cubuk"><i style="width:' + Math.round(il.biten / il.sinav * 100) + '%"></i></div></div><span class="sayac">›</span></div>';
+    });
+    h += '<div class="ara" style="margin-top:14px"><button class="btn cizgi" data-a="secimBasla">Derslerimi Değiştir</button></div>';
     return h;
   };
 
   E.ders = function (x) {
-    var d = ders(x.id), tl = dersTestleri(d.id), konular = [];
-    tl.forEach(function (t) { t.sorular.forEach(function (q) { konular.push(V.sorular[q].konu); }); });
-    konular = benzersiz(konular);
-    var h = ust(d.ad, tl.length + ' test · 30 soru');
-    tl.forEach(function (t) { h += testSatiri(t); });
-    h += '<h2>Bu dersteki konular</h2><div class="etiketler">';
-    konular.forEach(function (k) { h += '<span>' + esc(k) + '</span>'; });
-    return h + '</div>';
-  };
-
-  E.denemeler = function () {
-    var h = ust('Karma Denemeler', 'Her denemede tüm derslerden sorular');
-    V.testler.forEach(function (t) { if (t.tur === 'deneme') h += testSatiri(t); });
+    var did = x.d, ders = B.dersler[did];
+    var h = ust(ders.ad, 'Ders kodu ' + ders.kod + ' · ' + soruSay(did) + ' çıkmış soru');
+    h += '<div class="ara"><button class="btn" data-a="karisik" data-d="' + did + '">Karışık Test · 10 soru</button></div>';
+    var yl = D.yanlis.filter(function (a) { return a.split('|')[0] === did; });
+    if (yl.length) h += '<div class="ara"><button class="btn cizgi" data-a="yanlisCoz" data-d="' + did + '">Bu dersteki yanlışlarım (' + yl.length + ')</button></div>';
+    h += '<div class="anahtar tik' + (D.anlik ? ' on' : '') + '" data-a="anlik"><span class="ic">Cevabı hemen göster</span><span class="dugme"><i></i></span></div>';
+    h += '<h2>Çıkmış sınavlar</h2>';
+    ders.s.forEach(function (s) {
+      var r = D.sonuc[did + '|' + s.k], kb = B.kitaplar[s.k];
+      var rozet = r ? '<span class="rozet ' + (r.dogru / r.toplam >= 0.5 ? 'iyi' : 'kotu') + '">' + r.dogru + '/' + r.toplam + '</span>' : '<span class="sayac">' + s.c.length + ' soru</span>';
+      h += '<div class="satir tik" data-a="sinav" data-d="' + did + '" data-k="' + s.k + '"><div class="ic"><div class="ad">' + esc(kb.ad) + '</div>' +
+        '<div class="alt">' + esc(kb.donem) + ' · ' + kb.oturum + '. oturum</div></div>' + rozet + '</div>';
+    });
     return h;
   };
 
   E.test = function () {
-    var id = T.sorular[T.sira], q = V.sorular[id], d = ders(q.ders);
-    var cev = anahtarlar(T.cevap).length;
-    var h = ust(T.ad, (T.sira + 1) + '. soru / ' + T.sorular.length,
-      '<span class="sure' + (T.kalan < 60 ? ' az' : '') + '" id="sure">' + iki(Math.floor(T.kalan / 60)) + ':' + iki(T.kalan % 60) + '</span>', 'testCik');
-    h += '<div class="cubuk"><i style="width:' + Math.round(cev / T.sorular.length * 100) + '%;background:' + d.renk + '"></i></div>';
-    h += '<div class="konu" style="color:' + d.renk + '">' + esc(d.ad) + ' · ' + esc(q.konu) + '</div>';
-    h += '<p class="soru">' + (T.sira + 1) + '. ' + esc(q.soru) + '</p>';
-    q.secenekler.forEach(function (o, i) {
-      h += '<div class="sik tik' + (T.cevap[id] === i ? ' secili' : '') + '" data-a="sec" data-i="' + i + '"><span class="h">' + HARF[i] + '</span><span class="y">' + esc(o) + '</span></div>';
-    });
+    var q = T.sorular[T.sira], ders = B.dersler[q.d], c = T.cevap[T.sira];
+    var cevaplandi = c !== undefined, goster = T.anlik && cevaplandi;
+    var h = ust(T.ad, (T.sira + 1) + '. soru / ' + T.sorular.length + (T.karisik ? ' · ' + kitapAdi(q.k) : ''), '', 'testCik');
+    h += '<div class="soru-kart"><img class="soru-img" src="' + resim(q.k, q.d, q.n) + '" alt="' + (T.sira + 1) + '. soru">' +
+      (q.c < 0 ? '<div class="iptal">Bu soru MEB tarafından iptal edildi, puana katılmaz.</div>' : '') + '</div>';
+    if (goster && q.c >= 0) {
+      h += '<div class="anlik ' + (c === q.c ? 'd">Doğru!' : 'y">Yanlış. Doğru cevap: ' + HARF[q.c]) + '</div>';
+    }
     h += '<div class="noktalar">';
-    T.sorular.forEach(function (sid, i) {
-      h += '<button class="' + (T.cevap.hasOwnProperty(sid) ? 'dolu' : '') + (i === T.sira ? ' su' : '') + '" data-a="atla" data-i="' + i + '">' + (i + 1) + '</button>';
+    T.sorular.forEach(function (s, i) {
+      var cl = '';
+      if (T.cevap[i] !== undefined) cl = T.anlik && s.c >= 0 ? (T.cevap[i] === s.c ? 'd' : 'y') : 'dolu';
+      h += '<button class="' + cl + (i === T.sira ? ' su' : '') + '" data-a="atla" data-i="' + i + '">' + (i + 1) + '</button>';
     });
     h += '</div>';
     var son = T.sira === T.sorular.length - 1;
-    h += '<div class="alt-bar"><div class="ic"><button class="btn cizgi' + (T.sira === 0 ? ' kapali' : '') + '" data-a="onceki">‹ Önceki</button>' +
-      (son ? '<button class="btn yesil" data-a="bitirSor">Testi Bitir</button>' : '<button class="btn" data-a="sonraki">Sonraki ›</button>') + '</div></div>';
+    h += '<div class="alt-bar"><div class="ic"><div class="siklar' + (q.c < 0 ? ' pasif' : '') + '">';
+    for (var i = 0; i < 4; i++) {
+      var cl = '';
+      if (goster && q.c >= 0) { if (i === q.c) cl = 'dogru'; else if (i === c) cl = 'yanlis'; }
+      else if (c === i) cl = 'on';
+      h += '<button class="' + cl + '" data-a="sec" data-i="' + i + '">' + HARF[i] + '</button>';
+    }
+    h += '</div><div class="satir2"><button class="btn cizgi' + (T.sira === 0 ? ' kapali' : '') + '" data-a="onceki">‹ Önceki</button>' +
+      (son ? '<button class="btn yesil" data-a="bitirSor">Bitir</button>' : '<button class="btn" data-a="sonraki">Sonraki ›</button>') + '</div></div></div>';
     return h;
   };
 
   E.sonuc = function (x) {
-    var r = x.r, p = Math.round(r.dogru / r.toplam * 100), f = x.f || 'hepsi';
-    var qs = x.sorular.map(function (id) { return V.sorular[id]; }).filter(function (q) {
-      var c = r.cevap[q.id];
-      if (f === 'yanlis') return c !== undefined && c !== q.dogru;
-      if (f === 'bos') return c === undefined;
-      return true;
-    });
+    var r = x.r, p = r.toplam ? Math.round(r.dogru / r.toplam * 100) : 0, f = x.f || 'hepsi';
     var h = ust('Sonuç', x.ad);
     h += '<div class="sonuc"><div class="puan">' + p + '</div><div class="b" style="margin-top:6px">' + (p >= 50 ? 'Geçer not! Böyle devam.' : 'Biraz daha çalışalım.') + '</div>' +
       '<div class="dyb"><span class="d">' + r.dogru + ' doğru</span><span class="yl">' + r.yanlis + ' yanlış</span><span class="b">' + r.bos + ' boş</span></div>' +
-      '<div class="b" style="font-size:13px;margin-top:6px">Net: ' + (r.dogru - r.yanlis / 4).toFixed(2) + '</div></div>';
-    h += '<div class="ikili">' + (x.id !== 'yanlislar' ? '<button class="btn cizgi" data-a="tekrar">Tekrar Çöz</button>' : '') + '<button class="btn" data-a="anasayfa">Ana Sayfa</button></div>';
+      (r.iptal ? '<div class="b" style="font-size:13px;margin-top:6px">' + r.iptal + ' iptal soru puana katılmadı</div>' : '') + '</div>';
+    h += '<div class="ikili">' + (x.tekrar ? '<button class="btn cizgi" data-a="tekrar">Tekrar Çöz</button>' : '') + '<button class="btn" data-a="anasayfa">Derslerim</button></div>';
     h += '<div class="filtre">';
     [['hepsi', 'Tümü'], ['yanlis', 'Yanlışlar'], ['bos', 'Boşlar']].forEach(function (a) {
       h += '<button class="' + (f === a[0] ? 'on' : '') + '" data-a="filtre" data-f="' + a[0] + '">' + a[1] + '</button>';
     });
     h += '</div>';
-    if (!qs.length) h += '<p class="bos">Bu listede soru yok.</p>';
-    qs.forEach(function (q) {
-      var c = r.cevap[q.id], d = ders(q.ders);
-      h += '<div class="cozum"><div class="konu" style="color:' + d.renk + '">' + esc(d.ad) + ' · ' + esc(q.konu) + '</div>' +
-        '<p class="soru">' + (x.sorular.indexOf(q.id) + 1) + '. ' + esc(q.soru) + '</p>';
-      q.secenekler.forEach(function (o, i) {
-        var sinif = i === q.dogru ? ' ok' : (i === c ? ' no' : '');
-        h += '<div class="cs' + sinif + '"><b>' + HARF[i] + ')</b><span>' + esc(o) + (i === q.dogru ? ' ✓' : (i === c ? ' ✗' : '')) + '</span></div>';
-      });
-      h += '<div class="acik">' + (c === undefined ? 'Boş bıraktın. ' : '') + esc(q.aciklama) + '</div></div>';
+    var adet = 0;
+    x.sorular.forEach(function (q, i) {
+      var c = x.cevap[i];
+      if (f === 'yanlis' && !(c !== undefined && q.c >= 0 && c !== q.c)) return;
+      if (f === 'bos' && !(c === undefined && q.c >= 0)) return;
+      adet++;
+      var durum, cl;
+      if (q.c < 0) { durum = 'İptal edilen soru'; cl = 'b'; }
+      else if (c === undefined) { durum = 'Boş · Doğru cevap: ' + HARF[q.c]; cl = 'b'; }
+      else if (c === q.c) { durum = 'Doğru · Cevabın: ' + HARF[c]; cl = 'd'; }
+      else { durum = 'Yanlış · Cevabın: ' + HARF[c] + ' · Doğru: ' + HARF[q.c]; cl = 'yl'; }
+      h += '<div class="cozum"><div class="cozum-ust b">' + (i + 1) + '. soru · ' + esc(kitapAdi(q.k)) + '</div>' +
+        '<img class="soru-img" src="' + resim(q.k, q.d, q.n) + '" alt="">' + '<div class="cozum-alt ' + cl + '">' + durum + '</div></div>';
     });
+    if (!adet) h += '<p class="bos">Bu listede soru yok.</p>';
     return h;
   };
 
   E.yanlislar = function () {
-    var say = {}, h = ust('Yanlışlarım', D.yanlislar.length + ' soru');
-    D.yanlislar.forEach(function (id) { var q = V.sorular[id]; if (q) say[q.ders] = (say[q.ders] || 0) + 1; });
+    var say = {};
+    D.yanlis.forEach(function (a) { var d = a.split('|')[0]; if (B.dersler[d]) say[d] = (say[d] || 0) + 1; });
+    var h = ust('Yanlışlarım', D.yanlis.length + ' soru');
     h += '<p class="bilgi">Yanlış yaptığın sorular burada birikir. Tekrar çözüp doğru yaptığında listeden çıkar.</p>';
-    if (D.yanlislar.length) h += '<div class="ara"><button class="btn" data-a="yanlisCoz" data-ders="">Hepsini Tekrar Çöz</button></div>';
-    else h += '<p class="bos">Şu an tekrar edilecek soru yok.</p>';
-    anahtarlar(say).sort(function (a, b) { return say[b] - say[a]; }).forEach(function (id) {
-      var d = ders(id);
-      h += '<div class="satir tik" data-a="yanlisCoz" data-ders="' + id + '"><span class="nokta" style="background:' + d.renk + '"></span>' +
-        '<div class="ic"><div class="ad">' + esc(d.ad) + '</div></div><span class="sayac">' + say[id] + ' soru ›</span></div>';
+    var ds = anahtarlar(say);
+    if (!ds.length) h += '<p class="bos">Şu an tekrar edilecek soru yok.</p>';
+    ds.sort(function (a, b) { return say[b] - say[a]; }).forEach(function (did) {
+      h += '<div class="satir tik" data-a="yanlisCoz" data-d="' + did + '"><div class="ic"><div class="ad">' + esc(B.dersler[did].ad) + '</div>' +
+        '<div class="alt"><span class="kod">' + B.dersler[did].kod + '</span></div></div><span class="sayac">' + say[did] + ' soru ›</span></div>';
     });
-    if (D.yanlislar.length) h += '<button class="sil" data-a="yanlisTemizle">Listeyi temizle</button>';
+    if (ds.length) h += '<button class="baglanti sil" data-a="yanlisTemizle">Listeyi temizle</button>';
     return h;
   };
 
-  function optikHesap(f) {
-    var dogru = 0, yanlis = 0, isaretli = 0, anahtarVar = false;
-    for (var i = 0; i < f.sayi; i++) {
-      var c = f.cevap[i], a = f.anahtar[i];
-      if (a !== null) anahtarVar = true;
-      if (c !== null) isaretli++;
-      if (c === null || a === null) continue;
-      if (c === a) dogru++; else yanlis++;
-    }
-    return { dogru: dogru, yanlis: yanlis, isaretli: isaretli, anahtar: anahtarVar, puan: Math.round(dogru / f.sayi * 100) };
+  /* ---------- seçim akışı ---------- */
+  function secimBasla() { secimGecici = D.secim.slice(); git({ e: 'sec', i: 0 }); }
+  function secimKaydet() {
+    D.secim = secimGecici.slice(); D.kurulum = true; kaydet();
+    yigin = [{ e: 'ana' }]; ciz(); window.scrollTo(0, 0);
+    toast(D.secim.length ? D.secim.length + ' ders seçildi.' : 'Ders seçmedin.');
   }
-
-  E.cikmis = function () {
-    var h = ust('Çıkmış Sorular', 'Gerçek MEB sınav kitapçıkların');
-    h += '<p class="bilgi">MEB\'in yayımladığı soru kitapçığını (PDF) telefonuna indir ve buraya ekle. Kitapçığı çözerken cevaplarını optik forma işaretle; cevap anahtarını girince puanını hesaplarım. Kâğıt kitapçık için PDF\'siz de ekleyebilirsin.</p>';
-    if (ANDROID) h += '<div class="ara"><button class="btn" data-a="pdfSec">+ PDF Kitapçık Ekle</button></div>';
-    h += '<div class="ara"><button class="btn cizgi" data-a="kitapcikYeni">+ PDF\'siz Kitapçık Ekle</button></div>';
-    if (!D.cikmis.length) h += '<p class="bos">Henüz kitapçık eklemedin.</p>';
-    D.cikmis.forEach(function (k) {
-      h += '<div class="kart"><div class="baslik">' + esc(k.ad) + (k.pdf ? '<span class="rozet-k">PDF</span>' : '') + '</div><div class="ikili">' +
-        (k.pdf ? '<button class="btn cizgi" data-a="pdfAc" data-k="' + k.id + '">PDF\'i Aç</button>' : '') +
-        '<button class="btn" data-a="formYeni" data-k="' + k.id + '">+ Optik Form</button></div>';
-      k.formlar.forEach(function (f) {
-        var r = optikHesap(f);
-        h += '<div class="form-satir tik" data-a="form" data-k="' + k.id + '" data-f="' + f.id + '"><span class="ic">' + esc(f.ders) + '</span>' +
-          '<span class="sayac">' + (r.anahtar ? r.dogru + 'D ' + r.yanlis + 'Y · ' + r.puan + ' puan' : r.isaretli + '/' + f.sayi + ' işaretli') + ' ›</span></div>';
-      });
-      h += '<button class="sil" data-a="kitapcikSil" data-k="' + k.id + '">Kitapçığı sil</button></div>';
-    });
-    return h;
-  };
-
-  E.kitapcikYeni = function () {
-    return ust('Yeni Kitapçık', 'PDF\'siz (kâğıt) kitapçık') +
-      '<label for="kad">Kitapçık adı</label><input class="girdi" id="kad" placeholder="Örn. 2025 3. Dönem 1. Oturum">' +
-      '<div style="margin-top:16px"><button class="btn" data-a="kitapcikEkle">Ekle</button></div>';
-  };
-
-  E.formYeni = function (x) {
-    var k = kitapcik(x.k);
-    return ust('Yeni Optik Form', k ? k.ad : '') +
-      '<label for="fders">Ders adı</label><input class="girdi" id="fders" placeholder="Örn. Tarih 5">' +
-      '<label for="fsayi">Soru sayısı</label><input class="girdi" id="fsayi" type="number" min="1" max="60" value="20">' +
-      '<div style="margin-top:16px"><button class="btn" data-a="formEkle">Formu Oluştur</button></div>';
-  };
-
-  E.form = function (x) {
-    var k = kitapcik(x.k), f = formBul(k, x.f);
-    if (!f) return ust('Optik form', '') + '<p class="bos">Form bulunamadı.</p>';
-    var m = x.m || 'cevap', r = optikHesap(f);
-    var h = ust(f.ders, k.ad, k.pdf ? '<button class="btn cizgi" style="width:auto;padding:8px 12px;margin-left:8px" data-a="pdfAc" data-k="' + k.id + '">PDF</button>' : '');
-    h += '<div class="ikili"><button class="btn ' + (m === 'cevap' ? '' : 'cizgi') + '" data-a="mod" data-m="cevap">Cevaplarım</button>' +
-      '<button class="btn ' + (m === 'anahtar' ? 'kirmizi' : 'cizgi') + '" style="' + (m === 'anahtar' ? 'background:#A3154D;border-color:#A3154D' : '') + '" data-a="mod" data-m="anahtar">Cevap Anahtarı</button></div>';
-    h += '<p class="bilgi">' + (m === 'cevap' ? 'Kitapçıktaki cevaplarını işaretle. Aynı daireye tekrar dokunursan silinir.' : 'Cevap anahtarındaki doğru şıkları işaretle.') + '</p>';
-    if (r.anahtar) {
-      h += '<div class="sonuc" style="padding:12px"><div class="dyb" style="margin:0"><span class="d">' + r.dogru + ' D</span><span class="yl">' + r.yanlis + ' Y</span>' +
-        '<span class="b">' + (f.sayi - r.dogru - r.yanlis) + ' B</span><span class="p">' + r.puan + ' puan</span></div></div>';
-    }
-    h += '<div class="' + m + '">';
-    for (var i = 0; i < f.sayi; i++) {
-      var c = f.cevap[i], a = f.anahtar[i], secili = m === 'cevap' ? c : a;
-      var renk = (a !== null && c !== null) ? (a === c ? '#1E8A50' : '#C93535') : '';
-      h += '<div class="optik-satir"><span class="no"' + (renk ? ' style="color:' + renk + '"' : '') + '>' + (i + 1) + '</span>';
-      for (var hi = 0; hi < 4; hi++) {
-        var ipucu = m === 'cevap' && a === hi && c !== null && c !== hi;
-        h += '<button class="daire' + (secili === hi ? ' on' : '') + (ipucu ? ' ipucu' : '') + '" data-a="isaret" data-s="' + i + '" data-h="' + hi + '">' + HARF[hi] + '</button>';
-      }
-      h += '</div>';
-    }
-    h += '</div><button class="sil" data-a="formSil">Bu formu sil</button>';
-    return h;
-  };
+  function secSonraki() {
+    var x = simdiki();
+    if (x.i >= B.aileler.length - 1) { secimKaydet(); return; }
+    yigin[yigin.length - 1] = { e: 'sec', i: x.i + 1 }; ciz(); window.scrollTo(0, 0);
+  }
+  function secGeri() {
+    var x = simdiki();
+    if (x.i > 0) { yigin[yigin.length - 1] = { e: 'sec', i: x.i - 1 }; ciz(); window.scrollTo(0, 0); }
+    else { secimGecici = null; geri(); }
+  }
 
   /* ---------- test akışı ---------- */
-  function testBaslat(id, sorular, ad, sure) {
-    var t = id ? testBul(id) : null;
-    T = { id: id || 'yanlislar', ad: ad || t.ad, sorular: sorular || t.sorular, sira: 0, cevap: {}, kalan: Math.round((sure || t.sure) * 60) };
-    clearInterval(zaman);
-    zaman = setInterval(function () {
-      if (!T) return;
-      T.kalan = Math.max(0, T.kalan - 1);
-      var el = document.getElementById('sure');
-      if (el) { el.textContent = iki(Math.floor(T.kalan / 60)) + ':' + iki(T.kalan % 60); el.className = 'sure' + (T.kalan < 60 ? ' az' : ''); }
-      if (T.kalan === 0) { toast('Süre doldu.'); bitir(); }
-    }, 1000);
+  function testBaslat(ad, sorular, ayar) {
+    T = { ad: ad, sorular: sorular, sira: 0, cevap: {}, anlik: D.anlik, karisik: ayar.karisik, anahtar: ayar.anahtar, yeniden: ayar.yeniden };
     git({ e: 'test' });
   }
-  function testtenCik() { clearInterval(zaman); T = null; geri(); }
-  function testCikSor() { onay('Testten çıkarsan cevapların kaydedilmez. Çıkmak istiyor musun?', 'Çık', testtenCik, true); }
+  function sinavAc(did, kid) {
+    var s = null; B.dersler[did].s.forEach(function (x) { if (x.k === kid) s = x; });
+    var sorular = s.c.map(function (c, i) { return { d: did, k: kid, n: i + 1, c: c }; });
+    testBaslat(B.dersler[did].ad + ' · ' + B.kitaplar[kid].ad, sorular, { anahtar: did + '|' + kid, yeniden: { tur: 'sinav', d: did, k: kid } });
+  }
+  function karisikAc(did) {
+    var hepsi = [];
+    B.dersler[did].s.forEach(function (s) { s.c.forEach(function (c, i) { if (c >= 0) hepsi.push({ d: did, k: s.k, n: i + 1, c: c }); }); });
+    testBaslat(B.dersler[did].ad + ' · Karışık', karistir(hepsi).slice(0, 10), { karisik: true, yeniden: { tur: 'karisik', d: did } });
+  }
+  function yanlisAc(did) {
+    var qs = D.yanlis.filter(function (a) { return !did || a.split('|')[0] === did; }).map(anahtardanSoru).filter(function (q) { return q; });
+    if (!qs.length) { toast('Tekrar edilecek soru yok.'); return; }
+    testBaslat('Yanlışları Tekrar', karistir(qs).slice(0, 30), { karisik: true });
+  }
+  function testtenCik() { T = null; geri(); }
+  function testCikSor() {
+    if (!anahtarlar(T.cevap).length) { testtenCik(); return; }
+    onay('Testten çıkarsan cevapların kaydedilmez. Çıkmak istiyor musun?', 'Çık', testtenCik, true);
+  }
   function bitir() {
-    if (!T) return;
-    clearInterval(zaman);
-    var dogru = 0, yanlis = 0, yl = D.yanlislar.slice();
-    T.sorular.forEach(function (id) {
-      if (!T.cevap.hasOwnProperty(id)) return;
-      var j = yl.indexOf(id);
-      if (T.cevap[id] === V.sorular[id].dogru) { dogru++; if (j >= 0) yl.splice(j, 1); }
-      else { yanlis++; if (j < 0) yl.push(id); }
+    var dogru = 0, yanlis = 0, bos = 0, iptal = 0;
+    T.sorular.forEach(function (q, i) {
+      var c = T.cevap[i], a = soruAnahtar(q), j = D.yanlis.indexOf(a);
+      if (q.c < 0) { iptal++; return; }
+      if (c === undefined) { bos++; return; }
+      if (c === q.c) { dogru++; if (j >= 0) D.yanlis.splice(j, 1); }
+      else { yanlis++; if (j < 0) D.yanlis.push(a); }
     });
-    var r = { dogru: dogru, yanlis: yanlis, bos: T.sorular.length - dogru - yanlis, toplam: T.sorular.length, cevap: T.cevap };
-    if (T.id !== 'yanlislar') D.sonuclar[T.id] = r;
-    D.yanlislar = yl;
+    var r = { dogru: dogru, yanlis: yanlis, bos: bos, iptal: iptal, toplam: dogru + yanlis + bos };
+    if (T.anahtar) D.sonuc[T.anahtar] = r;
     kaydet();
-    var bilgi = { e: 'sonuc', r: r, sorular: T.sorular, ad: T.ad, id: T.id };
-    T = null;
-    yigin.pop();
-    git(bilgi);
+    var bilgi = { e: 'sonuc', r: r, sorular: T.sorular, cevap: T.cevap, ad: T.ad, tekrar: T.yeniden };
+    T = null; yigin.pop(); git(bilgi);
   }
 
-  /* ---------- Android köprüsünden gelen çağrılar ---------- */
-  window.pdfEklendi = function (id, ad) {
-    D.cikmis.unshift({ id: id, ad: String(ad).replace(/\.pdf$/i, ''), pdf: true, formlar: [] });
-    kaydet();
-    if (simdiki().e === 'cikmis') ciz();
-    toast('Kitapçık eklendi.');
-  };
   window.geriTusu = function () {
     if (modalEl.style.display === 'block') { modalKapat(); return true; }
-    if (simdiki().e === 'test') { testCikSor(); return true; }
+    var x = simdiki();
+    if (x.e === 'test') { testCikSor(); return true; }
+    if (x.e === 'sec') { secGeri(); return true; }
     if (yigin.length > 1) { geri(); return true; }
     return false;
   };
@@ -432,89 +406,70 @@ label { display: block; font-weight: 700; font-size: 13px; margin: 14px 0 6px; }
     while (el && el !== kok) { if (el.getAttribute && el.getAttribute('data-a')) return el; el = el.parentNode; }
     return null;
   }
+  function ac(b, ad) { return b.getAttribute(ad); }
   var eylemler = {
     geri: geri,
     anasayfa: anaya,
-    testCik: testCikSor,
-    ders: function (b) { git({ e: 'ders', id: b.getAttribute('data-id') }); },
-    denemeler: function () { git({ e: 'denemeler' }); },
-    yanlislar: function () { git({ e: 'yanlislar' }); },
-    cikmis: function () { git({ e: 'cikmis' }); },
-    testAc: function (b) { testBaslat(b.getAttribute('data-id')); },
-    sec: function (b) {
-      var id = T.sorular[T.sira], i = +b.getAttribute('data-i');
-      if (T.cevap[id] === i) delete T.cevap[id]; else T.cevap[id] = i;
+    girisAtla: function () { D.kurulum = true; kaydet(); anaya(); },
+    secimBasla: secimBasla,
+    secGeri: secGeri,
+    secToggle: function (b) {
+      var d = ac(b, 'data-d'), j = secimGecici.indexOf(d);
+      if (j >= 0) secimGecici.splice(j, 1); else secimGecici.push(d);
       ciz();
     },
-    atla: function (b) { T.sira = +b.getAttribute('data-i'); ciz(); window.scrollTo(0, 0); },
+    secAtla: function () {
+      var aile = B.aileler[simdiki().i];
+      secimGecici = secimGecici.filter(function (d) { return !icinde(aile.d, d); });
+      secSonraki();
+    },
+    secIleri: function () {
+      var aile = B.aileler[simdiki().i];
+      if (!aile.d.some(function (d) { return icinde(secimGecici, d); })) { toast('Bir kod seç ya da "Atla"ya bas.'); return; }
+      secSonraki();
+    },
+    secBitir: secimKaydet,
+    ders: function (b) { git({ e: 'ders', d: ac(b, 'data-d') }); },
+    sinav: function (b) { sinavAc(ac(b, 'data-d'), ac(b, 'data-k')); },
+    karisik: function (b) { karisikAc(ac(b, 'data-d')); },
+    anlik: function () { D.anlik = !D.anlik; kaydet(); ciz(); },
+    yanlislar: function () { git({ e: 'yanlislar' }); },
+    yanlisCoz: function (b) { yanlisAc(ac(b, 'data-d')); },
+    yanlisTemizle: function () { onay('Yanlışlar listesi tamamen silinsin mi?', 'Sil', function () { D.yanlis = []; kaydet(); ciz(); }, true); },
+    testCik: testCikSor,
+    sec: function (b) {
+      var q = T.sorular[T.sira], i = +ac(b, 'data-i');
+      if (q.c < 0) return;
+      if (T.anlik && T.cevap[T.sira] !== undefined) return; // anlık modda cevap değişmez
+      var secti = T.cevap[T.sira] !== i;
+      if (secti) T.cevap[T.sira] = i; else delete T.cevap[T.sira];
+      ciz();
+      if (secti && !T.anlik && T.sira < T.sorular.length - 1) setTimeout(function () { if (T) { T.sira++; ciz(); window.scrollTo(0, 0); } }, 250);
+    },
+    atla: function (b) { T.sira = +ac(b, 'data-i'); ciz(); window.scrollTo(0, 0); },
     onceki: function () { if (T.sira > 0) { T.sira--; ciz(); window.scrollTo(0, 0); } },
     sonraki: function () { if (T.sira < T.sorular.length - 1) { T.sira++; ciz(); window.scrollTo(0, 0); } },
     bitirSor: function () {
-      var bos = T.sorular.length - anahtarlar(T.cevap).length;
-      onay(bos ? bos + ' soru boş. Yine de testi bitirmek istiyor musun?' : 'Testi bitirmek istiyor musun?', 'Bitir', bitir);
+      var cevapsiz = 0;
+      T.sorular.forEach(function (q, i) { if (q.c >= 0 && T.cevap[i] === undefined) cevapsiz++; });
+      onay(cevapsiz ? cevapsiz + ' soru boş. Yine de bitirmek istiyor musun?' : 'Testi bitirmek istiyor musun?', 'Bitir', bitir);
     },
-    tekrar: function () { var x = simdiki(); yigin.pop(); testBaslat(x.id); },
-    filtre: function (b) { simdiki().f = b.getAttribute('data-f'); ciz(); },
-    yanlisCoz: function (b) {
-      var dk = b.getAttribute('data-ders');
-      var ids = D.yanlislar.filter(function (id) { return V.sorular[id] && (!dk || V.sorular[id].ders === dk); }).slice(0, 40);
-      if (!ids.length) return;
-      testBaslat(null, ids, 'Yanlışları Tekrar', Math.max(5, Math.ceil(ids.length * 1.5)));
+    tekrar: function () {
+      var y = simdiki().tekrar; yigin.pop();
+      if (y.tur === 'sinav') sinavAc(y.d, y.k); else karisikAc(y.d);
     },
-    yanlisTemizle: function () { onay('Yanlışlar listesi tamamen silinsin mi?', 'Sil', function () { D.yanlislar = []; kaydet(); ciz(); }, true); },
-    pdfSec: function () { if (ANDROID) window.Android.pdfSec(); },
-    pdfAc: function (b) { if (ANDROID) window.Android.pdfAc(b.getAttribute('data-k')); else toast('PDF açma telefondaki uygulamada çalışır.'); },
-    kitapcikYeni: function () { git({ e: 'kitapcikYeni' }); },
-    kitapcikEkle: function () {
-      var ad = document.getElementById('kad').value.replace(/^\s+|\s+$/g, '') || 'Kitapçık';
-      D.cikmis.unshift({ id: String(new Date().getTime()), ad: ad, pdf: false, formlar: [] });
-      kaydet(); geri(); toast('Kitapçık eklendi.');
-    },
-    kitapcikSil: function (b) {
-      var k = kitapcik(b.getAttribute('data-k'));
-      onay('"' + k.ad + '" ve optik formları silinsin mi?', 'Sil', function () {
-        if (k.pdf && ANDROID) window.Android.pdfSil(k.id);
-        D.cikmis = D.cikmis.filter(function (x) { return x.id !== k.id; });
-        kaydet(); ciz();
-      }, true);
-    },
-    formYeni: function (b) { git({ e: 'formYeni', k: b.getAttribute('data-k') }); },
-    formEkle: function () {
-      var x = simdiki(), k = kitapcik(x.k);
-      var n = Math.min(60, Math.max(1, parseInt(document.getElementById('fsayi').value, 10) || 20));
-      var ad = document.getElementById('fders').value.replace(/^\s+|\s+$/g, '') || 'Ders';
-      var f = { id: String(new Date().getTime()), ders: ad, sayi: n, cevap: dolu(n, null), anahtar: dolu(n, null) };
-      k.formlar.push(f);
-      kaydet();
-      yigin.pop();
-      git({ e: 'form', k: k.id, f: f.id });
-    },
-    form: function (b) { git({ e: 'form', k: b.getAttribute('data-k'), f: b.getAttribute('data-f') }); },
-    mod: function (b) { simdiki().m = b.getAttribute('data-m'); ciz(); },
-    isaret: function (b) {
-      var x = simdiki(), f = formBul(kitapcik(x.k), x.f), alan = x.m === 'anahtar' ? 'anahtar' : 'cevap';
-      var s = +b.getAttribute('data-s'), hh = +b.getAttribute('data-h');
-      f[alan][s] = f[alan][s] === hh ? null : hh;
-      kaydet(); ciz();
-    },
-    formSil: function () {
-      var x = simdiki(), k = kitapcik(x.k);
-      onay('Bu optik form silinsin mi?', 'Sil', function () {
-        k.formlar = k.formlar.filter(function (f) { return f.id !== x.f; });
-        kaydet(); geri();
-      }, true);
-    }
+    filtre: function (b) { simdiki().f = ac(b, 'data-f'); ciz(); }
   };
   kok.addEventListener('click', function (ev) {
     var b = eylemBul(ev.target);
     if (!b) return;
-    var fn = eylemler[b.getAttribute('data-a')];
+    var fn = eylemler[ac(b, 'data-a')];
     if (fn) fn(b);
   });
 
   function ciz() {
     var x = simdiki();
-    document.body.className = x.e === 'test' ? 'testte' : '';
+    document.body.className = x.e === 'test' ? 'testte' : (x.e === 'sec' ? 'secimde' : '');
     kok.innerHTML = (E[x.e] || E.ana)(x);
   }
   ciz();
